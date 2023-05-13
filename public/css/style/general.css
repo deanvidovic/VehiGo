@@ -43,6 +43,8 @@
   );
   --facebook-gradient: linear-gradient(120deg, #3b5998, #fff);
   --twitter-gradient: linear-gradient(120deg, #36d8ff, #fff);
+
+  --glass-effect: rgba(255, 255, 255, 0.2);
 }
 
 * {
@@ -75,6 +77,10 @@ a:visited {
 
 ul {
   list-style: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 ::selection {
@@ -161,6 +167,78 @@ ul {
   gap: 1.2rem;
 }
 
+/* *************FORM************ */
+
+.form--section {
+  padding-top: 9.8rem;
+}
+
+.form {
+  min-width: 60rem;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4.4rem;
+  border-radius: 11px;
+  background-color: var(--glass-effect);
+  backdrop-filter: saturate(180%) blur(90%);
+  -webkit-backdrop-filter: saturate(180%) blur(90%);
+}
+
+.sign-in--content {
+  min-width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form--heading {
+  font-size: 1.6rem;
+  display: block;
+  text-align: left;
+  font-weight: 700;
+}
+
+.form--input {
+  min-width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem solid var(--glass-effect);
+  transition: 0.1s all ease;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  padding: 1.2rem;
+}
+
+.form--input:focus {
+  outline: none;
+  border-bottom: 0.3rem solid var(--color-primary);
+}
+
+.submit {
+  min-width: 100%;
+  gap: 1.2rem;
+  flex-direction: column;
+}
+
+.form--button {
+  border: none;
+  border-radius: 5px;
+  padding: 1.4rem 2.8rem;
+  min-width: 100%;
+}
+
+.main--button {
+  text-transform: uppercase;
+  color: var(--color-tertiary);
+  background-color: var(--color-primary);
+}
+
+.secondary--button {
+  background-color: transparent;
+  text-decoration: underline;
+}
 /* 
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
