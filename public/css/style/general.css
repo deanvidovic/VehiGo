@@ -1,0 +1,167 @@
+/* 
+  --Font
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+  font-family: 'Roboto', sans-serif;
+  --Spacing 
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+  --Colors
+  Primary: #3b474b
+
+  Tints:
+  Shades:
+  -----------------
+  Secondary:#fab005;
+  Thertiry:
+
+*/
+:root {
+  --color-primary: #1c7ed6;
+  --color-secondary: #228be6;
+  --color-tertiary: #eee;
+  --backgroud-linear: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgb(60, 71, 75),
+    rgb(98, 119, 125)
+  );
+  --main-liner-gradient: linear-gradient(
+    to bottom right,
+    #1c7ed6,
+    #398bd2,
+    #6ba0ce
+  );
+  --dark-color: #222;
+  --light-color: #c6e4ff;
+
+  --instagram-gradient: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  --facebook-gradient: linear-gradient(120deg, #3b5998, #fff);
+  --twitter-gradient: linear-gradient(120deg, #36d8ff, #fff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #f7f7f7;
+  position: relative;
+  background: var(--backgroud-linear);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 1000px inset rgba(0, 0, 0, 0.2);
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--dark-color);
+}
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-heading {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  font-weight: 700;
+  color: #eee;
+}
+
+.secondary-heading {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  letter-spacing: 0.5rem;
+  color: var(--color-tertiary);
+}
+
+.secondary-heading-margin-btn {
+  margin-bottom: 4.8rem;
+}
+
+.tertiary-heading {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+
+.subheading {
+  display: block;
+  text-transform: uppercase;
+  color: var(--light-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.6rem;
+}
+
+.whitespace {
+  padding-bottom: 9.8rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--twoRows--twoColumns {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.hr {
+  height: 0.1rem;
+  background-color: var(--light-color);
+  border-radius: 20%/50%;
+  margin: 6.4rem auto 9.8rem auto;
+}
+.hr-home {
+  max-width: 130rem;
+}
+
+.footer--nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-list {
+  display: flex;
+  gap: 1.2rem;
+}
+
+/* 
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/

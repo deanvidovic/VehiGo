@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is Vehi Go rent a car made by two studenst of 4th grade of secondary school.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style/style.css">
+    <link rel="stylesheet" href="./css/style/admin.css">
+    <link rel="stylesheet" href="./css/style/general.css">
+    <link rel="stylesheet" href="./css/queries/queries.css">
+
+    <!-- ICON -->
+    <link rel="icon" href="./images/brand/favicon.png">
+    <link rel="manifest" href="./images/brand/favicon.png">
+    <link rel="apple-touch-icon" href="./images/brand/favicon.png">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>VehiGo | Započni putovanje!</title>
+</head>
+<body>
+    
+  <%- include('./partials/header.ejs') %>
+    <main>
+        <section class="hero--section whitespace">
+            <article class="car-logos d-flex-center">
+              <div class="arrow">
+                <ion-icon name="chevron-back-outline" class="arrow-icon left-arrow"></ion-icon>
+              </div>
+              <!--Svaki id mora biti ime marke auta, to isto stavi i kod path za sliku ovdje umjesto mercedes stavi to $row["name"].. .-->
+              <div class="logo" id="mercedes">
+                <img src="./images/brand/mercedes.png" alt="Logo of mercedes">
+              </div>
+              <div class="logo active-logo" id="volkswagen">
+                <img src="./images/brand/vw.png" alt="Logo of volkswagen">
+              </div>
+              <div class="logo" id="bmw">
+                <img src="./images/brand/bmw.png" alt="Logo of bmw">
+              </div>
+              <div class="arrow">
+                <ion-icon name="chevron-forward-outline" class="arrow-icon right-arrow"></ion-icon>
+              </div>
+            </article>
+            <article class="models">
+              <div class="models-content">
+                <h2 class="models-heading">Modeli</h2>
+                <div class="list-of-cars">
+                  <ul class="models-list">
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="car-image d-flex-center">
+              <!-- <img src="./images/mainCars/vwArteon.png"> -->
+            </article>
+            <article class="book-car--btn d-flex-center">
+              <button class="bookBtn">Rezerviraj</button>
+            </article>
+            <article class="description d-flex-center">
+              <div class="description-box d-flex-center">
+                <div class="heading-desc d-flex-center">
+                  <span>Počinje od</span>  <span class="strong">200€</span> <span>po danu<span>
+                </div>
+                <div class="note-description d-flex-center"><span>cijena za</span> <span>minimalno</span><span> 7 dana</span></div>
+              </div>
+            </article>
+        </section>
+        <section class="services--section container whitespace">
+          <p class="subheading">&mdash;Naše usluge</p>
+          <h1 class="secondary-heading secondary-heading-margin-btn">Osigurajte si savršeno putovanje</h1>
+          <article class="services">
+            <div class="services-content">
+              <h1 class="services-heading">Iznajmljivanje autiju</h1>
+              <p class="text--content">Iskusite vrhunski luksuz s našom uslugom najma automobila. Nudimo izbor prefinjenih luksuznih automobila za najam. Bez obzira želite li sportski automobil ili elegantnu limuzinu, naša pažljivo održavana flota zadovoljit će vaše potrebe. S jednostavnim postupkom najma i vrhunskom podrškom, pružamo nezaboravno iskustvo najma luksuznih automobila.</p>
+            </div>
+            <div class="image--content d-flex-center">
+              <img src="./images/homePage/lamborginiUrus.jpg" class="photo--service luxury-service" alt="Photo of luxury car service">
+            </div>
+            <div class="image--content d-flex-center">
+              <img src="./images/homePage/rollsRoyce.jpg" class="photo--service events-service" alt="Photo of van for events service">
+            </div>
+            <div class="services-content">
+              <h1 class="services-heading">Auti za posebne evente</h1>
+              <p class="text--content">Nudimo iznajmljivanje vozila za krizme, vjenčanja, maturalne zabave i druge posebne prigode. Naša raznolika flota vozila uključuje luksuzne limuzine, sportske automobile i prostrane mini-buseve. Stručni vozači pružaju pouzdanu uslugu kako biste ostvarili nezaboravna iskustva na vašim posebnim trenucima.</p>
+            </div>
+          </article>
+        </section>
+        <hr class="hr hr-home">
+        <section class="features--section container whitespace">
+          <div class="features--heading d-flex-center">
+            <h1 class="subheading">&mdash; Naše prednosti&mdash;</p>
+            <h1 class="secondary-heading secondary-heading-margin-btn">Zašto smo bolji od drugih</h1>
+          </div>
+          <main class="features--boxes grid grid--twoRows--twoColumns">
+            <article class="features--box">
+              <ion-icon name="time-outline" class="features--icon"></ion-icon>
+              <h1 class="features--heading">Usluga 24/7</h1>
+              <p class="features--description">Dostupni za sva vaša pitanja uz iznajmljivanje automobila, kontaktirajte nas u bilo koje doba dana ili noći.</p>
+            </article>  
+            <article class="features--box">
+              <ion-icon name="car-outline" class="features--icon"></ion-icon>
+              <h1 class="features--heading">Veliki izbor autiju</h1>
+              <p class="features--description">Nudimo širok izbor automobila za iznajmljivanje, imamo pravi automobil za svakoga.</p>
+            </article>  
+            <article class="features--box">
+              <ion-icon name="happy-outline" class="features--icon"></ion-icon>
+              <h1 class="features--heading">Uvijek veseli radnici</h1>
+              <p class="features--description">Naši radnici su spremni Vas veselo uslužiti. Uključite se i uživajte u iznajmljivanju automobila.</p>
+            </article>  
+            <article class="features--box">
+              <ion-icon name="rocket-outline" class="features--icon"></ion-icon>
+              <h1 class="features--heading">Brzo i lagano</h1>
+              <p class="features--description">Dostupan je brz i jednostavan način da dođete do svog auta, bez skrivenih dodatnih troškova.</p>
+            </article>  
+          </main>
+        </section>
+              
+        
+
+        <%- include('./partials/footer.ejs') %>
+
+        <script src="./js/script.js"></script>   
+    </main>
+  
+
+    <!-- ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
