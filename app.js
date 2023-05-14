@@ -1,12 +1,14 @@
 // importi
 const express = require("express");
 const mongoose = require("mongoose");
+const authRoutes = require('./routes/authRoutes')
 
 const app = express();
 const dbURI =
   "mongodb+srv://admin:vehigoadmin@vehigo.yluvl2q.mongodb.net/VehiGo?retryWrites=true&w=majority";
 
 app.use(express.static("public"));
+app.use(express.json()) // pretvara json objekt koji dolazi s requestom u js objekt
 app.set("view engine", "ejs");
 
 mongoose
@@ -25,14 +27,4 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/cars", (req, res) => {
-  res.render("./sites/cars");
-});
-
-app.get("/signin", (req, res) => {
-  res.render("./sites/signin");
-});
-
-app.get("/signup", (req, res) => {
-  res.render("./sites/signup");
-});
+app.use(authRoutes);
