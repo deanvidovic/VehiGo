@@ -52,6 +52,8 @@
   margin-top: 3rem;
   display: flex;
   gap: 2rem;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -71,22 +73,43 @@
 
 .car--card:hover {
   transform: translate(-1rem, -1rem);
-  box-shadow: 1rem 1rem 0 var(--shadow-effect);
+  box-shadow: 1rem 1rem 1rem var(--shadow-effect);
+  cursor: pointer;
 }
 
 .grid--car--img {
   width: 40rem;
   height: auto;
+  filter: drop-shadow(1px 1px 1px var(--shadow-effect));
 }
 
 .car--card--content {
   margin-top: 1.2rem;
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: 75fr 25fr;
   grid-template-rows: repeat(2, 1fr);
   gap: 1.2rem;
 }
 
+.car--name {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.car--year {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  font-size: 1.6rem;
+}
+
+.car--price {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
 /* 
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
