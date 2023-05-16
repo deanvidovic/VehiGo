@@ -1,4 +1,4 @@
-const Customer = require('../models/Customer')
+const Customer = require('../models/Customer');
 
 const handleErrors = (err) => {
     let errors = {
@@ -7,7 +7,7 @@ const handleErrors = (err) => {
         customer_last_name: '',
         customer_home_address: '',
         customer_city: '',
-        ccustomer_email: '',
+        customer_email: '',
         customer_password: ''
     };
 
@@ -54,7 +54,7 @@ module.exports.signup_post = async (req, res) => {
             customer_city,
             customer_email,
             customer_password
-        })
+        });
 
         res.status(201).json(customer)
     } catch (err) {
@@ -62,6 +62,11 @@ module.exports.signup_post = async (req, res) => {
         res.status(400).json({ errors })
     }
 }
+
+module.exports.signin_post = async (req, res) => {
+    res.send("new signin");
+}
+
 
 // {
 //     "customer_driver_license_number": 300004,
@@ -72,7 +77,3 @@ module.exports.signup_post = async (req, res) => {
 //     "ccustomer_email":"deaan@gmail.com",
 //     "customer_password":"lozinka"
 // }
-
-module.exports.signin_post = async (req, res) => {
-    res.send("new signin");
-}

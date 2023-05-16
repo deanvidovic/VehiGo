@@ -3,13 +3,17 @@ const express = require("express");
 const mongoose = require("mongoose");
 const authRoutes = require('./routes/authRoutes');
 const carRoutes = require('./routes/carRoutes');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const dbURI =
   "mongodb+srv://admin:vehigoadmin@vehigo.yluvl2q.mongodb.net/VehiGo?retryWrites=true&w=majority";
 
 app.use(express.static("public"));
-app.use(express.json()) // pretvara json objekt koji dolazi s requestom u js objekt
+app.use(express.json()); // pretvara json objekt koji dolazi s requestom u js objekt
+app.use(cookieParser());
+
+
 app.set("view engine", "ejs");
 
 mongoose

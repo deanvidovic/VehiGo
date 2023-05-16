@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 const { isEmail } = require('validator');
+const bcrypt = require('bcrypt');
 
 
 
 const customerSchema = new mongoose.Schema({
     customer_driver_license_number: {
-        type: Number,
+        type: String,
+        unique: true,
         required: [true, 'Morate unijeti broj vozacke dozvole!']
     },
 
@@ -46,6 +48,13 @@ const customerSchema = new mongoose.Schema({
 
 });
 
+
+customerSchema.pre('save', async function (next) {
+    //this je objekt koji smo kreirali prije nego se spremi    
+    const salt = await bcrypt.genSalt(); //generiramo neki salt koji cemo zakvacit na nasu sifru radi bolje i sigurnije enkripcije, funkcija je asinkrona
+    this.customer_password = await bcrypt.hash(this.customer_password, salt)
+    next();
+});
 
 const Customer = mongoose.model('customer', customerSchema);
 

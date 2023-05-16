@@ -1,0 +1,274 @@
+[
+  {
+    "car_license_number": "AB 1234 CD",
+    "car_brand": "Mercedes",
+    "car_model": "A-Class",
+    "car_type": "Hatchback",
+    "car_kilometers": 5000,
+    "car_max_speed": 220,
+    "car_fuel_consumption": 8.5,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "EF 5678 GH",
+    "car_brand": "Mercedes",
+    "car_model": "C-Class",
+    "car_type": "Sedan",
+    "car_kilometers": 10000,
+    "car_max_speed": 240,
+    "car_fuel_consumption": 10.2,
+    "is_rented": true
+  },
+
+  {
+    "car_license_number": "IJ 9012 KL",
+    "car_brand": "Mercedes",
+    "car_model": "GLE",
+    "car_type": "SUV",
+    "car_kilometers": 8000,
+    "car_max_speed": 230,
+    "car_fuel_consumption": 11.8,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "MN 3456 OP",
+    "car_brand": "Mercedes",
+    "car_model": "E-Class",
+    "car_type": "Sedan",
+    "car_kilometers": 15000,
+    "car_max_speed": 250,
+    "car_fuel_consumption": 9.6,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "QR 7890 ST",
+    "car_brand": "Mercedes",
+    "car_model": "GLC",
+    "car_type": "SUV",
+    "car_kilometers": 12000,
+    "car_max_speed": 240,
+    "car_fuel_consumption": 10.5,
+    "is_rented": true
+  },
+
+  {
+    "car_license_number": "UV 2345 WX",
+    "car_brand": "BMW",
+    "car_model": "3 Series",
+    "car_type": "Sedan",
+    "car_kilometers": 6000,
+    "car_max_speed": 230,
+    "car_fuel_consumption": 9.8,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "YZ 6789 AB",
+    "car_brand": "BMW",
+    "car_model": "5 Series",
+    "car_type": "Sedan",
+    "car_kilometers": 9000,
+    "car_max_speed": 240,
+    "car_fuel_consumption": 11.2,
+    "is_rented": true
+  },
+
+  {
+    "car_license_number": "CD 0123 EF",
+    "car_brand": "BMW",
+    "car_model": "X3",
+    "car_type": "SUV",
+    "car_kilometers": 7000,
+    "car_max_speed": 220,
+    "car_fuel_consumption": 10.5,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "GH 4567 IJ",
+    "car_brand": "BMW",
+    "car_model": "7 Series",
+    "car_type": "Sedan",
+    "car_kilometers": 12000,
+    "car_max_speed": 250,
+    "car_fuel_consumption": 12.4,
+    "is_rented": true
+  },
+
+  {
+    "car_license_number": "KL 8901 MN",
+    "car_brand": "BMW",
+    "car_model": "X5",
+    "car_type": "SUV",
+    "car_kilometers": 10000,
+    "car_max_speed": 240,
+    "car_fuel_consumption": 11.8,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "OP 2345 QR",
+    "car_brand": "Audi",
+    "car_model": "A4",
+    "car_type": "Sedan",
+    "car_kilometers": 8000,
+    "car_max_speed": 230,
+    "car_fuel_consumption": 9.5,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "ST 6789 UV",
+    "car_brand": "Audi",
+    "car_model": "Q5",
+    "car_type": "SUV",
+    "car_kilometers": 10000,
+    "car_max_speed": 240,
+    "car_fuel_consumption": 10.7,
+    "is_rented": true
+  },
+  {
+      "car_license_number": "WX 0123 YZ",
+      "car_brand": "Audi",
+      "car_model": "A6",
+      "car_type": "Sedan",
+      "car_kilometers": 12000,
+      "car_max_speed": 250,
+      "car_fuel_consumption": 11.8,
+      "is_rented": false
+  },
+  {
+      "car_license_number": "AB 4567 CD",
+      "car_brand": "Audi",
+      "car_model": "Q3",
+      "car_type": "SUV",
+      "car_kilometers": 7000,
+      "car_max_speed": 220,
+      "car_fuel_consumption": 9.9,
+      "is_rented": true
+  },
+  {
+      "car_license_number": "EF 8901 GH",
+      "car_brand": "Audi",
+      "car_model": "A3",
+      "car_type": "Hatchback",
+      "car_kilometers": 6000,
+      "car_max_speed": 230,
+      "car_fuel_consumption": 8.7,
+      "is_rented": false
+  },
+
+  {
+    "car_license_number": "IJ 2345 KL",
+    "car_brand": "Volkswagen",
+    "car_model": "Golf",
+    "car_type": "Hatchback",
+    "car_kilometers": 9000,
+    "car_max_speed": 220,
+    "car_fuel_consumption": 7.5,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "MN 6789 OP",
+    "car_brand": "Volkswagen",
+    "car_model": "Passat",
+    "car_type": "Sedan",
+    "car_kilometers": 10000,
+    "car_max_speed": 230,
+    "car_fuel_consumption": 8.9,
+    "is_rented": true
+  },
+
+  {
+    "car_license_number": "QR 0123 ST",
+    "car_brand": "Volkswagen",
+    "car_model": "Tiguan",
+    "car_type": "SUV",
+    "car_kilometers": 12000,
+    "car_max_speed": 240,
+    "car_fuel_consumption": 9.8,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "UV 4567 WX",
+    "car_brand": "Volkswagen",
+    "car_model": "Polo",
+    "car_type": "Hatchback",
+    "car_kilometers": 8000,
+    "car_max_speed": 210,
+    "car_fuel_consumption": 6.5,
+    "is_rented": true
+  },
+
+  {
+    "car_license_number": "YZ 8901 AB",
+    "car_brand": "Volkswagen",
+    "car_model": "Arteon",
+    "car_type": "Sedan",
+    "car_kilometers": 11000,
+    "car_max_speed": 240,
+    "car_fuel_consumption": 9.2,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "CD 2345 EF",
+    "car_brand": "Skoda",
+    "car_model": "Octavia",
+    "car_type": "Sedan",
+    "car_kilometers": 12000,
+    "car_max_speed": 220,
+    "car_fuel_consumption": 8.7,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "GH 6789 IJ",
+    "car_brand": "Skoda",
+    "car_model": "Kodiaq",
+    "car_type": "SUV",
+    "car_kilometers": 10000,
+    "car_max_speed": 230,
+    "car_fuel_consumption": 10.1,
+    "is_rented": true
+  },
+
+  {
+    "car_license_number": "KL 0123 MN",
+    "car_brand": "Skoda",
+    "car_model": "Superb",
+    "car_type": "Sedan",
+    "car_kilometers": 9000,
+    "car_max_speed": 240,
+    "car_fuel_consumption": 9.4,
+    "is_rented": false
+  },
+
+  {
+    "car_license_number": "OP 4567 QR",
+    "car_brand": "Skoda",
+    "car_model": "Fabia",
+    "car_type": "Hatchback",
+    "car_kilometers": 7000,
+    "car_max_speed": 210,
+    "car_fuel_consumption": 7.8,
+    "is_rented": true
+  },
+  
+  {
+    "car_license_number": "ST 8901 UV",
+    "car_brand": "Skoda",
+    "car_model": "Rapid",
+    "car_type": "Sedan",
+    "car_kilometers": 8000,
+    "car_max_speed": 220,
+    "car_fuel_consumption": 8.5,
+    "is_rented": false
+  }
+]
+        
