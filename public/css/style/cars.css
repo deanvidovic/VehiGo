@@ -1,0 +1,23 @@
+/* HEADING */
+.cars--header {
+  margin: 1.2rem 3.2rem;
+  border-radius: 11px;
+  background-image: linear-gradient(
+      to right,
+      var(--shadow-effect),
+      var(--shadow-effect)
+    ),
+    url("https://hips.hearstapps.com/hmg-prod/images/rp-bentley-continental-gt-v8-20-2-1570633139.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  /* background-color: #fff; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
