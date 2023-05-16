@@ -34,8 +34,31 @@
     <%- include('../partials/header.ejs') %>
     <main>
       <header class="cars--header">
-        <h1 class="secondary-heading">Naša ponuda</h1>
+        <h1 class="secondary-heading">Istražite našu ponudu automobila</h1>
       </header>
+      <main class="cars--store">
+        <div class="filters">
+          <p>Marke</p>
+          <ul class="models--cars">
+            <li class="model--car car1">
+              <input type="checkbox" class="model--checkbox" />Car
+            </li>
+            <li class="model--car car2">
+              <input type="checkbox" class="model--checkbox" />Car
+            </li>
+            <li class="model--car car3">
+              <input type="checkbox" class="model--checkbox" />Car
+            </li>
+            <li class="model--car car4">
+              <input type="checkbox" class="model--checkbox" />Car
+            </li>
+            <li class="model--car car5">
+              <input type="checkbox" class="model--checkbox" />Car
+            </li>
+          </ul>
+        </div>
+        <div class="cars--grid"></div>
+      </main>
     </main>
     <%- include('../partials/footer.ejs') %>
     <script src="./js/script.js"></script>

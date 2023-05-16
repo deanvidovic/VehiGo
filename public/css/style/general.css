@@ -45,6 +45,7 @@
   --twitter-gradient: linear-gradient(120deg, #36d8ff, #fff);
 
   --glass-effect: rgba(255, 255, 255, 0.2);
+  --shadow-effect: rgba(0, 0, 0, 0.7);
 }
 
 * {
