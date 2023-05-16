@@ -3,7 +3,7 @@ const { isEmail } = require('validator');
 
 
 
-const customersSchema = new mongoose.Schema({
+const customerSchema = new mongoose.Schema({
     customer_driver_license_number: {
         type: Number,
         required: [true, 'Morate unijeti broj vozacke dozvole!']
@@ -47,7 +47,7 @@ const customersSchema = new mongoose.Schema({
 });
 
 
-const Customer = mongoose.model('customer', customersSchema);
+const Customer = mongoose.model('customer', customerSchema);
 
 
 module.exports = Customer;

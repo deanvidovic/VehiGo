@@ -1,7 +1,8 @@
 // importi
 const express = require("express");
 const mongoose = require("mongoose");
-const authRoutes = require('./routes/authRoutes')
+const authRoutes = require('./routes/authRoutes');
+const carRoutes = require('./routes/carRoutes');
 
 const app = express();
 const dbURI =
@@ -28,3 +29,4 @@ app.get("/", (req, res) => {
 });
 
 app.use(authRoutes);
+app.use(carRoutes);
