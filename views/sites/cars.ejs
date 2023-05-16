@@ -11,6 +11,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style/style.css" />
+    <link rel="stylesheet" href="./css/style/cars.css" />
     <link rel="stylesheet" href="./css/style/general.css" />
     <link rel="stylesheet" href="./css/queries/queries.css" />
 
@@ -32,9 +33,12 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <%- include('../partials/footer.ejs') %>
-      <script src="./js/script.js"></script>
+      <header class="cars--header">
+        <h1 class="secondary-heading">Naša ponuda</h1>
+      </header>
     </main>
+    <%- include('../partials/footer.ejs') %>
+    <script src="./js/script.js"></script>
 
     <!-- ICONS -->
     <script
