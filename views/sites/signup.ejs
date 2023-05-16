@@ -33,25 +33,56 @@
     <%- include('../partials/header.ejs') %>
     <main>
       <section class="form--section sing-in--form container d-flex-center whitespace">
-        <form action="/home" class="form d-flex-center">
+        <form class="form d-flex-center">
+
           <h1 class="secondary-heading">Registriraj se</h1>
 
           <div class="sign-in--content">
-            <label for="username" class="form--label form--heading">Korisnicko ime</label>
-            <input id="username" name="username" placeholder="korisnicko ime" class="form--input"/>
+            <label for="customer_driver_license_number" class="form--label form--heading">Broj vozacke dozvole:</label>
+            <input id="customer_driver_license_number" name="customer_driver_license_number" type="text" onkeypress="allowOnlyNumbersAndBigLetters(event)"  placeholder="Unesite broj vozacke dozvole:" class="form--input"/>
           </div>
+
           <div class="sign-in--content">
-            <label for="username" class="form--label form--heading">Password:</label>
-            <input id="username" name="username" placeholder="********" class="form--input"/>
+            <label for="customer_first_name" class="form--label form--heading">Vase ime:</label>
+            <input id="customer_first_name" name="customer_first_name" type="text" onkeypress="allowOnlyLetters(event)" placeholder="Unesite vase ime:" class="form--input"/>
           </div>
+
+          <div class="sign-in--content">
+            <label for="customer_last_name" class="form--label form--heading">Vase prezime:</label>
+            <input id="customer_last_name" name="customer_last_name" type="text" onkeypress="allowOnlyLetters(event)" placeholder="Unesite vase prezime:" class="form--input"/>
+          </div>
+
+          <div class="sign-in--content">
+            <label for="customer_home_address" class="form--label form--heading">Vasa adresa:</label>
+            <input id="customer_home_address" name="customer_home_address" type="text" placeholder="Unesite vasu adresu:" class="form--input"/>
+          </div>
+
+          <div class="sign-in--content">
+            <label for="customer_city" class="form--label form--heading">Grad:</label>
+            <input id="customer_city" name="customer_city" type="text" onkeypress="allowOnlyLetters(event)" placeholder="Grad:" class="form--input"/>
+          </div>
+
+          <div class="sign-in--content">
+            <label for="customer_email" class="form--label form--heading">E - mail:</label>
+            <input id="customer_email" name="customer_email" type="email" placeholder="Unesite e-mail adresu:" class="form--input"/>
+          </div>
+
+          <div class="sign-in--content">
+            <label for="customer_password" class="form--label form--heading">Lozinka:</label>
+            <input id="customer_password" name="customer_password" type="password"  placeholder="********" class="form--input"/>
+          </div>
+
           <div class="submit d-flex-center">
-            <input type="submit" name="submit--button" class="form--button main--button"value="Registriraj se"/>
+            <button>Registriraj se</button>
           </div>
+
         </form>
+
+
       </section>
     </main>
     <%- include('../partials/footer.ejs') %>
-    <script src="./js/script.js"></script>
+    <script src="./js/formHandler.js"></script>
 
     <!-- ICONS -->
     <script

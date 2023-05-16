@@ -33,24 +33,29 @@
     <%- include('../partials/header.ejs') %>
     <main>
       <section class="form--section sing-in--form container d-flex-center whitespace">
-        <form action="/home" class="form d-flex-center">
+        <form id="signinForm" class="form d-flex-center">
+
           <h1 class="secondary-heading">Prijavi se</h1>
 
           <div class="sign-in--content">
-            <label for="username" class="form--label form--heading">Korisnicko ime</label>
-            <input id="username" name="username" placeholder="korisnicko ime" class="form--input"/>
+            <label for="first_name" class="form--label form--heading">Korisnicko ime</label>
+            <input id="first_name" name="first_name" onkeypress="allowOnlyLetters(event)" placeholder="Unesite vase ime:" class="form--input"/>
+          
           </div>
+
           <div class="sign-in--content">
-            <label for="username" class="form--label form--heading">Password:</label>
-            <input id="username" name="username" placeholder="********" class="form--input"/>
+            <label for="password" class="form--label form--heading">Lozinka:</label>
+            <input id="password" type="password" name="password" placeholder="********" class="form--input"/>
           </div>
+
           <div class="submit d-flex-center">
             <input type="submit" name="submit--button" class="form--button main--button"value="Registriraj se"/>
           </div>
+
         </form>
       </section>
       <%- include('../partials/footer.ejs') %>
-      <script src="./js/script.js"></script>
+      <script src="./js/formHandler.js"></script>
     </main>
 
     <!-- ICONS -->
