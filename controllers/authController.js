@@ -1,20 +1,26 @@
 const Customer = require('../models/Customer');
+const jwt = require('jsonwebtoken');
 
 const handleErrors = (err) => {
+    console.log(err.message, err.code);
     let errors = {
-        customer_driver_license_number: '',
-        customer_first_name: '',
-        customer_last_name: '',
-        customer_home_address: '',
-        customer_city: '',
-        customer_email: '',
-        customer_password: ''
+        license_number: '',
+        first_name: '',
+        last_name: '',
+        home_address: '',
+        city: '',
+        email: '',
+        password: ''
     };
 
+
     if (err.code == 11000) {
-        errors.email = 'Ovaj e-mail vec postoji.'
+        errors.email = 'Ovaj e-mail vec postoji.';
+        errors.license_number = 'Ovaj broj vozacke dozvole vec postoji.';
         return errors;
     }
+
+    console.log(err.code)
 
     if (err.message.includes('customer validation failed')) {
         Object.values(err.errors).forEach(({ properties }) => {
@@ -23,6 +29,11 @@ const handleErrors = (err) => {
     }
 
     return errors;
+}
+
+const maxAge = 3 * 24 * 60 * 60;
+const createToken = (id) => {
+    return jwt.sign({ id }, 'e alo bidibao', { expiresIn: maxAge });
 }
 
 module.exports.signup_get = (req, res) => {
@@ -56,7 +67,10 @@ module.exports.signup_post = async (req, res) => {
             customer_password
         });
 
-        res.status(201).json(customer)
+        const token = createToken(customer._id);
+        res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
+        res.status(201).json( { customer: customer._id} );
+
     } catch (err) {
         const errors = handleErrors(err);
         res.status(400).json({ errors })

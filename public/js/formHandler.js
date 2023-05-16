@@ -15,9 +15,17 @@ function allowOnlyNumbersAndBigLetters(event) {
 }
 
 const form = document.querySelector('form');
+const email_error = document.querySelector('.handle--error--mail');
+const password_error = document.querySelector('.handle--error--password');
+const license_error = document.querySelector('.handle--error--license_number');
+
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  email_error.textContent = '';
+  password_error.textContent = '';
+  license_error.textContent = '';
   
   const customer_driver_license_number = form.customer_driver_license_number.value;
   const customer_first_name = form.customer_first_name.value;
@@ -45,6 +53,19 @@ form.addEventListener('submit', async (e) => {
         'Content-Type': 'application/json'
       }
     });
+
+    const data = await res.json();
+    console.log(data);
+
+    if(data.errors) {
+      email_error.textContent = data.errors.email;
+      password_error.textContent = data.errors.password;
+      license_error.textContent = data.errors.license_error;
+    } 
+    
+    if(data.customer){
+      location.assign('/');
+    }
   }
   catch (err) {
     console.log(err);

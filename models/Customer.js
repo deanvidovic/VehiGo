@@ -8,6 +8,7 @@ const customerSchema = new mongoose.Schema({
     customer_driver_license_number: {
         type: String,
         unique: true,
+        minlength: [8, 'Vas broj vozacke dozvole mora imati najmanje 8 znakova!'],
         required: [true, 'Morate unijeti broj vozacke dozvole!']
     },
 
@@ -24,7 +25,6 @@ const customerSchema = new mongoose.Schema({
     customer_home_address: {
         type: String,
         required: [true, 'Morate unijeti vasu adresu!'],
-        unique: true
     },
 
     customer_city: {
@@ -37,7 +37,7 @@ const customerSchema = new mongoose.Schema({
         required: [true, 'Morate unijeti vasu e-mail adresu!'],
         unique: true,
         lowercase: true,
-        validate:[ isEmail, 'Morate unijeti validnu e-mail adresu.']
+        validate:[isEmail, 'Morate unijeti validnu e-mail adresu.']
     },
 
     customer_password: {
