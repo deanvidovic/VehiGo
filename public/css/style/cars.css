@@ -40,6 +40,7 @@
   border: 1px solid var(--white-color);
   background-color: transparent;
   color: var(--white-color);
+  gap: 1rem;
 }
 
 .filter--btn:hover {
@@ -54,9 +55,38 @@
   flex-wrap: wrap;
 }
 
+.logo--nav--cars {
+  width: auto;
+  height: 2.4rem;
+}
+
 .car--card {
   min-width: 20rem;
+  flex-direction: column;
+  border: 0.1rem solid var(--white-color);
+  border-radius: 11px;
+  transition: all 0.4s ease;
+  padding: 1.4rem;
 }
+
+.car--card:hover {
+  transform: translate(-1rem, -1rem);
+  box-shadow: 1rem 1rem 0 var(--shadow-effect);
+}
+
+.grid--car--img {
+  width: 40rem;
+  height: auto;
+}
+
+.car--card--content {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 75fr 25fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
 /* 
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
