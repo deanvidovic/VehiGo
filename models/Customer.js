@@ -48,6 +48,22 @@ const customerSchema = new mongoose.Schema({
 
 });
 
+customerSchema.statics.login = async function (customer_email, customer_password) {
+    const customer = await this.findOne({ customer_email }); // this je za customer model
+
+    if (customer) {
+        const isPasswordValid = await bcrypt.compare(customer_password, customer.customer_password);
+
+        if (isPasswordValid) {
+            return customer;
+        }
+
+        throw Error('Vasa lozinka nije tocna!')
+    } 
+
+    throw Error('Vas e - mail nije tocan!');
+    
+}
 
 customerSchema.pre('save', async function (next) {
     //this je objekt koji smo kreirali prije nego se spremi    
