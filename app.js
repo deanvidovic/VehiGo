@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const authRoutes = require('./routes/authRoutes');
 const carRoutes = require('./routes/carRoutes');
+const aboutRoutes = require('./routes/aboutRoutes');
 const cookieParser = require('cookie-parser');
 
 const app = express();
@@ -34,3 +35,5 @@ app.get("/", (req, res) => {
 
 app.use(authRoutes);
 app.use(carRoutes);
+app.use(aboutRoutes);
+
