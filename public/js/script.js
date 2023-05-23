@@ -6,8 +6,6 @@ const carLogos = document.querySelectorAll(".logo");
 const leftArr = document.querySelector(".left-arrow");
 const rightArr = document.querySelector(".right-arrow");
 
-const modelsList = document.querySelector(".models-list");
-
 const carImg = document.querySelector(".car-image");
 
 /**************HOME PAGE*************/
@@ -56,15 +54,6 @@ const displayNavModels = (side) => {
   }
 };
 
-//Function which displays aside models list
-const displayModels = (brand) => {
-  modelsList.innerHTML = "";
-  carsArr[brand].forEach((modBrand) => {
-    modelsList.innerHTML += `<li class="models-car">${modBrand}</li>`;
-  });
-};
-displayModels(brandArr);
-
 //ovo carsArr[brandArr][0] to samo zamjeni s odgovarajućim atributom iz tablice
 //Function which displays car img
 const displayCarImg = (brand) => {
@@ -78,14 +67,8 @@ const displayUI = (side) => {
   //Display nav of models
   displayNavModels(side);
 
-  //Display aside model list
-  displayModels(brandArr);
-
   //Display center car img
   displayCarImg(currentBrand);
-
-  //For car names
-  console.log(modelsNames(carsArr, String(brandArr)));
 };
 
 leftArr.addEventListener("click", (e) => {
