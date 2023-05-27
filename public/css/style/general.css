@@ -48,6 +48,7 @@
   --shadow-effect: rgba(0, 0, 0, 0.7);
 
   --white-color: #fff;
+  --black-color: rgb(38, 43, 44);
 }
 
 * {
