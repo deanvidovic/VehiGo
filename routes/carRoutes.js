@@ -4,6 +4,7 @@ const router = Router();
 
 
 router.get('/cars', carsController.cars_get)
+router.get('/cars/:id', carsController.single_car)
 
 
 module.exports = router;

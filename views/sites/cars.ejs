@@ -104,18 +104,21 @@
         <hr />
         <div class="cars--grid">
           <% cars.forEach(car => { %>
+          <a href="/cars/<%= car._id %>">
             <article class="car--card">
               <img
                 src="<%= car.car_url %>"
+                alt="Card of car lamborgini urus"
                 class="grid--car--img"
               />
               <hr />
               <aside class="car--card--content">
-                <h1 class="car--name"><%= car.car_model %></h1>
-                <p class="car--year"><%= car.car_year %></p>
-                <p class="car--price"><%= car.car_price %> €</p>
+                <h1 class="car--name">Model: <%= car.car_model %></h1>
+                <p class="car--year">Godina proizvodnje: <%= car.car_year %></p>
+                <p class="car--price">Cijena (€/h): <%= car.car_price %> €</p>
               </aside>
             </article>
+          </a>
           <% }) %>
 
           <!-- <article class="car--card">
