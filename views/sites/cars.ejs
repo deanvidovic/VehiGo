@@ -103,7 +103,22 @@
         </div>
         <hr />
         <div class="cars--grid">
-          <article class="car--card">
+          <% cars.forEach(car => { %>
+            <article class="car--card">
+              <img
+                src="<%= car.car_url %>"
+                class="grid--car--img"
+              />
+              <hr />
+              <aside class="car--card--content">
+                <h1 class="car--name"><%= car.car_model %></h1>
+                <p class="car--year"><%= car.car_year %></p>
+                <p class="car--price"><%= car.car_price %> €</p>
+              </aside>
+            </article>
+          <% }) %>
+
+          <!-- <article class="car--card">
             <img
               src="./images/carsPage/lamborginiUrus.png"
               alt="Card of car lamborgini urus"
@@ -193,7 +208,7 @@
               <p class="car--year">2022</p>
               <p class="car--price">$300/day</p>
             </aside>
-          </article>
+          </article> -->
         </div>
       </main>
     </main>

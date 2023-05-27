@@ -7,6 +7,9 @@
     "car_kilometers": 5000,
     "car_max_speed": 220,
     "car_fuel_consumption": 8.5,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   },
 
@@ -18,6 +21,9 @@
     "car_kilometers": 10000,
     "car_max_speed": 240,
     "car_fuel_consumption": 10.2,
+    "car_year": 2014,
+    "car_price": 65,
+    "car_url": "./images/carsPage/EF 5678 GH.png",
     "is_rented": true
   },
 
@@ -29,6 +35,9 @@
     "car_kilometers": 8000,
     "car_max_speed": 230,
     "car_fuel_consumption": 11.8,
+    "car_year": 2018,
+    "car_price": 80,
+    "car_url": "./images/carsPage/IJ 9012 KL.png",
     "is_rented": false
   },
 
@@ -40,6 +49,9 @@
     "car_kilometers": 15000,
     "car_max_speed": 250,
     "car_fuel_consumption": 9.6,
+    "car_year": 2019,
+    "car_price": 100,
+    "car_url": "./images/carsPage/MN 3456 OP.png",
     "is_rented": false
   },
 
@@ -51,6 +63,9 @@
     "car_kilometers": 12000,
     "car_max_speed": 240,
     "car_fuel_consumption": 10.5,
+    "car_year": 2012,
+    "car_price": 70,
+    "car_url": "./images/carsPage/QR 7890 ST.png",
     "is_rented": true
   },
 
@@ -62,6 +77,9 @@
     "car_kilometers": 6000,
     "car_max_speed": 230,
     "car_fuel_consumption": 9.8,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/UV 2345 WX.png",
     "is_rented": false
   },
 
@@ -73,6 +91,9 @@
     "car_kilometers": 9000,
     "car_max_speed": 240,
     "car_fuel_consumption": 11.2,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/YZ 6789 AB.png",
     "is_rented": true
   },
 
@@ -84,6 +105,9 @@
     "car_kilometers": 7000,
     "car_max_speed": 220,
     "car_fuel_consumption": 10.5,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   },
 
@@ -95,6 +119,9 @@
     "car_kilometers": 12000,
     "car_max_speed": 250,
     "car_fuel_consumption": 12.4,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": true
   },
 
@@ -106,6 +133,9 @@
     "car_kilometers": 10000,
     "car_max_speed": 240,
     "car_fuel_consumption": 11.8,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   },
 
@@ -117,6 +147,9 @@
     "car_kilometers": 8000,
     "car_max_speed": 230,
     "car_fuel_consumption": 9.5,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   },
 
@@ -128,37 +161,49 @@
     "car_kilometers": 10000,
     "car_max_speed": 240,
     "car_fuel_consumption": 10.7,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": true
   },
   {
-      "car_license_number": "WX 0123 YZ",
-      "car_brand": "Audi",
-      "car_model": "A6",
-      "car_type": "Sedan",
-      "car_kilometers": 12000,
-      "car_max_speed": 250,
-      "car_fuel_consumption": 11.8,
-      "is_rented": false
+    "car_license_number": "WX 0123 YZ",
+    "car_brand": "Audi",
+    "car_model": "A6",
+    "car_type": "Sedan",
+    "car_kilometers": 12000,
+    "car_max_speed": 250,
+    "car_fuel_consumption": 11.8,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
+    "is_rented": false
   },
   {
-      "car_license_number": "AB 4567 CD",
-      "car_brand": "Audi",
-      "car_model": "Q3",
-      "car_type": "SUV",
-      "car_kilometers": 7000,
-      "car_max_speed": 220,
-      "car_fuel_consumption": 9.9,
-      "is_rented": true
+    "car_license_number": "AB 4567 CD",
+    "car_brand": "Audi",
+    "car_model": "Q3",
+    "car_type": "SUV",
+    "car_kilometers": 7000,
+    "car_max_speed": 220,
+    "car_fuel_consumption": 9.9,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
+    "is_rented": true
   },
   {
-      "car_license_number": "EF 8901 GH",
-      "car_brand": "Audi",
-      "car_model": "A3",
-      "car_type": "Hatchback",
-      "car_kilometers": 6000,
-      "car_max_speed": 230,
-      "car_fuel_consumption": 8.7,
-      "is_rented": false
+    "car_license_number": "EF 8901 GH",
+    "car_brand": "Audi",
+    "car_model": "A3",
+    "car_type": "Hatchback",
+    "car_kilometers": 6000,
+    "car_max_speed": 230,
+    "car_fuel_consumption": 8.7,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
+    "is_rented": false
   },
 
   {
@@ -169,6 +214,9 @@
     "car_kilometers": 9000,
     "car_max_speed": 220,
     "car_fuel_consumption": 7.5,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   },
 
@@ -180,6 +228,9 @@
     "car_kilometers": 10000,
     "car_max_speed": 230,
     "car_fuel_consumption": 8.9,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": true
   },
 
@@ -191,6 +242,9 @@
     "car_kilometers": 12000,
     "car_max_speed": 240,
     "car_fuel_consumption": 9.8,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   },
 
@@ -202,6 +256,9 @@
     "car_kilometers": 8000,
     "car_max_speed": 210,
     "car_fuel_consumption": 6.5,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": true
   },
 
@@ -213,6 +270,9 @@
     "car_kilometers": 11000,
     "car_max_speed": 240,
     "car_fuel_consumption": 9.2,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   },
 
@@ -224,6 +284,9 @@
     "car_kilometers": 12000,
     "car_max_speed": 220,
     "car_fuel_consumption": 8.7,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   },
 
@@ -235,6 +298,9 @@
     "car_kilometers": 10000,
     "car_max_speed": 230,
     "car_fuel_consumption": 10.1,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": true
   },
 
@@ -246,6 +312,9 @@
     "car_kilometers": 9000,
     "car_max_speed": 240,
     "car_fuel_consumption": 9.4,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   },
 
@@ -257,9 +326,12 @@
     "car_kilometers": 7000,
     "car_max_speed": 210,
     "car_fuel_consumption": 7.8,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": true
   },
-  
+
   {
     "car_license_number": "ST 8901 UV",
     "car_brand": "Skoda",
@@ -268,7 +340,9 @@
     "car_kilometers": 8000,
     "car_max_speed": 220,
     "car_fuel_consumption": 8.5,
+    "car_year": 2012,
+    "car_price": 60,
+    "car_url": "./images/carsPage/AB 1234 CD.png",
     "is_rented": false
   }
 ]
-        

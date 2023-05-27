@@ -7,7 +7,7 @@
       var(--shadow-effect),
       var(--shadow-effect)
     ),
-    url("https://hips.hearstapps.com/hmg-prod/images/rp-bentley-continental-gt-v8-20-2-1570633139.jpg");
+    url("../../images/carsPage/carsBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 50vh;
