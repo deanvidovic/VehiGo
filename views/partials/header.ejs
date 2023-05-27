@@ -19,11 +19,19 @@
 
       <div class="menu">
         <ul class="menu-links d-flex-center">
-          <li><a href="/" class="menu-item item1">Home</a></li>
-          <li><a href="/cars" class="menu-item item2">Auti</a></li>
-          <li><a href="/about" class="menu-item item3">O nama</a></li>
-          <li><a href="/signin" class="menu-item item4">Prijavi se</a></li>
-          <li><a href="/logout" class="menu-item item4">Odjavi se</a></li>
+          <% if (customer) { %>
+            <li><a href="/" class="menu-item item1">Home</a></li>
+            <li><a href="/cars" class="menu-item item2">Auti</a></li>
+            <li><a href="/about" class="menu-item item3">O nama</a></li>
+            <li><%= customer.customer_first_name %></li>
+            <li><a href="/logout" class="menu-item item4">Odjavi se</a></li>
+          <% } else { %>
+            <li><a href="/" class="menu-item item1">Home</a></li>
+            <li><a href="/cars" class="menu-item item2">Auti</a></li>
+            <li><a href="/about" class="menu-item item3">O nama</a></li>
+            <li><a href="/signin" class="menu-item item4">Prijavi se</a></li>
+          <% } %>
+          
         </ul>
       </div>
     </nav>

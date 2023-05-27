@@ -5,6 +5,7 @@ const authRoutes = require("./routes/authRoutes");
 const carRoutes = require("./routes/carRoutes");
 const aboutRoutes = require("./routes/aboutRoutes");
 const cookieParser = require("cookie-parser");
+const { checkUser } = require("./middleware/authMiddleware");
 
 const app = express();
 const dbURI =
@@ -28,6 +29,8 @@ mongoose
     console.log(err);
   });
 
+// routes
+app.get('*', checkUser);
 app.get("/", (req, res) => {
   res.render("index");
 });
