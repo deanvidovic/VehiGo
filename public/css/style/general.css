@@ -16,6 +16,7 @@
 
 */
 :root {
+  --color-primary-dark: #004d90;
   --color-primary: #1c7ed6;
   --color-secondary: #228be6;
   --color-tertiary: #eee;
@@ -49,6 +50,7 @@
 
   --white-color: #fff;
   --black-color: rgb(38, 43, 44);
+  --danger-text: #9a0012;
 }
 
 * {
@@ -174,18 +176,16 @@ button {
 /* *************FORM************ */
 
 .form--section {
-  padding-top: 9.8rem;
+  padding-top: 6.4rem;
 }
 
 .form {
-  min-width: 60rem;
+  min-width: 50rem;
   flex-direction: column;
   gap: 3rem;
   padding: 4.4rem;
   border-radius: 11px;
-  background-color: var(--glass-effect);
-  backdrop-filter: saturate(180%) blur(90%);
-  -webkit-backdrop-filter: saturate(180%) blur(90%);
+  background-color: var(--white-color);
 }
 
 .sign-in--content {
@@ -198,10 +198,11 @@ button {
 }
 
 .form--heading {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   display: block;
-  text-align: left;
+  text-align: center;
   font-weight: 700;
+  color: var(--color-primary-dark);
 }
 
 .form--input {
@@ -211,13 +212,18 @@ button {
   border-bottom: 0.1rem solid var(--glass-effect);
   transition: 0.1s all ease;
   font-size: 1.8rem;
-  color: var(--color-primary);
-  padding: 1.2rem;
+  color: var(--color-primary-dark);
+  padding-bottom: 1rem;
+  border-bottom: 0.3rem solid var(--color-primary-dark);
+}
+
+.form--input::placeholder {
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .form--input:focus {
   outline: none;
-  border-bottom: 0.3rem solid var(--color-primary);
 }
 
 .submit {
@@ -236,12 +242,17 @@ button {
 .main--button {
   text-transform: uppercase;
   color: var(--color-tertiary);
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-dark);
 }
 
 .secondary--button {
   background-color: transparent;
   text-decoration: underline;
+}
+
+.handle--error {
+  display: none;
+  color: var(--danger-text);
 }
 
 /* 

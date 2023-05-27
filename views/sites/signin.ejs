@@ -32,32 +32,43 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <section class="form--section sing-in--form container d-flex-center whitespace">
+      <section
+        class="form--section sing-in--form container d-flex-center whitespace"
+      >
         <form id="signinForm" class="form d-flex-center">
-
-          <h1 class="secondary-heading">Prijavi se</h1>
+          <h1 class="form--heading">&mdash; Prijavi se &mdash;</h1>
 
           <div class="sign-in--content">
-            <label for="customer_email" class="form--label form--heading">E - mail:</label>
-            <input id="customer_email" name="customer_email" type="email" placeholder="Unesite e-mail adresu:" class="form--input"/>
+            <input
+              id="customer_email"
+              name="customer_email"
+              type="email"
+              placeholder="Email adresa"
+              class="form--input"
+            />
             <!-- DODATI CSS ZA OVOO CUUCKOO -->
             <div class="handle--error--mail"></div>
-            
           </div>
 
           <div class="sign-in--content">
-            <label for="customer_password" class="form--label form--heading">Lozinka:</label>
-            <input id="customer_password" name="customer_password" type="password"  placeholder="********" class="form--input"/>
+            <input
+              id="customer_password"
+              name="customer_password"
+              type="password"
+              placeholder="Password"
+              class="form--input"
+            />
             <!-- DODATI CSS ZA OVOO CUUCKOO -->
             <div class="handle--error--password"></div>
           </div>
 
           <div class="submit d-flex-center">
             <!-- DODATI CSS ZA OVOO CUUCKOO -->
-            <button>Registriraj se</button>
-            <div><a href="/signup">Nemas racun?</a></div>
+            <button class="form--button main--button">Registriraj se</button>
+            <button class="form--button secondary--button">
+              <a href="/signup">Nemas racun?</a>
+            </button>
           </div>
-
         </form>
       </section>
       <%- include('../partials/footer.ejs') %>

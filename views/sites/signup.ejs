@@ -32,62 +32,100 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <section class="form--section sing-in--form container d-flex-center whitespace">
+      <section
+        class="form--section sing-in--form container d-flex-center whitespace"
+      >
         <form id="signupForm" class="form d-flex-center">
-
-          <h1 class="secondary-heading">Registriraj se</h1>
+          <h1 class="form--heading">&mdash; Registriraj se &mdash;</h1>
 
           <div class="sign-in--content">
-            <label for="customer_driver_license_number" class="form--label form--heading">Broj vozacke dozvole:</label>
-            <input id="customer_driver_license_number" name="customer_driver_license_number" type="text" onkeypress="allowOnlyNumbersAndBigLetters(event)"  placeholder="Unesite broj vozacke dozvole:" class="form--input"/>
-            <!-- DODATI CSS ZA OVOO CUUCKOO -->
-            <div class="handle--error--license_number"></div>
+            <input
+              id="customer_driver_license_number"
+              name="customer_driver_license_number"
+              type="text"
+              onkeypress="allowOnlyNumbersAndBigLetters(event)"
+              placeholder="Broj vozacke"
+              class="form--input"
+            />
+            <div class="handle--error">Krvi broj vozacke</div>
           </div>
 
           <div class="sign-in--content">
-            <label for="customer_first_name" class="form--label form--heading">Vase ime:</label>
-            <input id="customer_first_name" name="customer_first_name" type="text" onkeypress="allowOnlyLetters(event)" placeholder="Unesite vase ime:" class="form--input"/>
+            <input
+              id="customer_first_name"
+              name="customer_first_name"
+              type="text"
+              onkeypress="allowOnlyLetters(event)"
+              placeholder="Ime"
+              class="form--input"
+            />
+            <div class="handle--error">Krivo upisano ime</div>
           </div>
 
           <div class="sign-in--content">
-            <label for="customer_last_name" class="form--label form--heading">Vase prezime:</label>
-            <input id="customer_last_name" name="customer_last_name" type="text" onkeypress="allowOnlyLetters(event)" placeholder="Unesite vase prezime:" class="form--input"/>
+            <input
+              id="customer_last_name"
+              name="customer_last_name"
+              type="text"
+              onkeypress="allowOnlyLetters(event)"
+              placeholder="Prezime"
+              class="form--input"
+            />
+            <div class="handle--error">Krivo prezime</div>
           </div>
 
           <div class="sign-in--content">
-            <label for="customer_home_address" class="form--label form--heading">Vasa adresa:</label>
-            <input id="customer_home_address" name="customer_home_address" type="text" placeholder="Unesite vasu adresu:" class="form--input"/>
+            <input
+              id="customer_home_address"
+              name="customer_home_address"
+              type="text"
+              placeholder="Adresa"
+              class="form--input"
+            />
+            <div class="handle--error">Kriva adresa</div>
           </div>
 
           <div class="sign-in--content">
-            <label for="customer_city" class="form--label form--heading">Grad:</label>
-            <input id="customer_city" name="customer_city" type="text" onkeypress="allowOnlyLetters(event)" placeholder="Grad:" class="form--input"/>
-            <!-- DODATI CSS ZA OVOO CUUCKOO -->
-            <div class="handle--error"></div>
+            <input
+              id="customer_city"
+              name="customer_city"
+              type="text"
+              onkeypress="allowOnlyLetters(event)"
+              placeholder="Grad"
+              class="form--input"
+            />
+            <div class="handle--error">Grad nepostoji</div>
           </div>
 
           <div class="sign-in--content">
-            <label for="customer_email" class="form--label form--heading">E - mail:</label>
-            <input id="customer_email" name="customer_email" type="email" placeholder="Unesite e-mail adresu:" class="form--input"/>
-            <!-- DODATI CSS ZA OVOO CUUCKOO -->
-            <div class="handle--error--mail"></div>
+            <input
+              id="customer_email"
+              name="customer_email"
+              type="email"
+              placeholder="Email adresa"
+              class="form--input"
+            />
+            <div class="handle--error">Kriva email adresa</div>
           </div>
 
           <div class="sign-in--content">
-            <label for="customer_password" class="form--label form--heading">Lozinka:</label>
-            <input id="customer_password" name="customer_password" type="password"  placeholder="********" class="form--input"/>
-            <!-- DODATI CSS ZA OVOO CUUCKOO -->
-            <div class="handle--error--password"></div>
+            <input
+              id="customer_password"
+              name="customer_password"
+              type="password"
+              placeholder="Password"
+              class="form--input"
+            />
+            <div class="handle--error">Krivi password</div>
           </div>
 
           <div class="submit d-flex-center">
-            <!-- DODATI CSS ZA OVOO CUUCKOO -->
-            <button>Registriraj se</button>
+            <button class="form--button main--button">Registriraj se</button>
+            <button class="form--button secondary--button">
+              <a href="/signin">Imas racun? Prijavi se</a>
+            </button>
           </div>
-
         </form>
-
-
       </section>
     </main>
     <%- include('../partials/footer.ejs') %>
