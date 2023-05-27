@@ -23,7 +23,7 @@ let brandArr = currentBrand + "Models";
 //!!!!Slike spremamo [imeMarke][imeModela].png
 const carsArr = {
   mercedesModels: ["Aklasa", { seats: 5, ks: 120, fuel: "benzin" }],
-  volkswagenModels: ["Arteon", { seats: 5, ks: 140, fuel: "benzin" }],
+  volkswagenModels: ["Arteon", { seats: 5, ks: 140, fuel: "dizel" }],
   bmwModels: ["X6M", { seats: 5, ks: 160, fuel: "benzin/hybrid" }],
 };
 
