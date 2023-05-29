@@ -7,7 +7,6 @@ const authRoutes = require("./routes/authRoutes");
 const carRoutes = require("./routes/carRoutes");
 const aboutRoutes = require("./routes/aboutRoutes");
 
-
 // middlewares
 const cookieParser = require("cookie-parser");
 const { checkUser } = require("./middleware/authMiddleware");
@@ -15,12 +14,12 @@ const { checkUser } = require("./middleware/authMiddleware");
 // ============================================================================
 
 const app = express();
-const dbURI = "mongodb+srv://admin:vehigoadmin@vehigo.yluvl2q.mongodb.net/VehiGo?retryWrites=true&w=majority";
+const dbURI =
+  "mongodb+srv://admin:vehigoadmin@vehigo.yluvl2q.mongodb.net/VehiGo?retryWrites=true&w=majority";
 
 app.use(express.static("public"));
 app.use(express.json()); // pretvara json objekt koji dolazi s requestom u js objekt
 app.use(cookieParser());
-
 
 app.set("view engine", "ejs");
 
@@ -37,7 +36,7 @@ mongoose
   });
 
 // routes
-app.get('*', checkUser);
+app.get("*", checkUser);
 app.get("/", (req, res) => {
   res.render("index");
 });

@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <!-- GOOGLE -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="914111657030-g40ppfst3gr183ckcjhcn0m8tdp4on4h.apps.googleusercontent.com">
+    <meta
+      name="google-signin-client_id"
+      content="914111657030-g40ppfst3gr183ckcjhcn0m8tdp4on4h.apps.googleusercontent.com"
+    />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,7 +42,7 @@
       <section
         class="form--section sing-in--form container d-flex-center whitespace"
       >
-        <form id="signinForm" class="form d-flex-center">
+        <form id="signinForm" class="form form--autentification d-flex-center">
           <h1 class="form--heading">&mdash; Prijavi se &mdash;</h1>
 
           <div class="sign-in--content">
@@ -72,7 +75,6 @@
             <button class="form--button secondary--button">
               <a href="/signup">Nemas racun?</a>
             </button>
-            
           </div>
         </form>
       </section>
@@ -80,10 +82,10 @@
       <script>
         function onSignIn(googleUser) {
           var profile = googleUser.getBasicProfile();
-          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-          console.log('Name: ' + profile.getName());
-          console.log('Image URL: ' + profile.getImageUrl());
-          console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+          console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log("Name: " + profile.getName());
+          console.log("Image URL: " + profile.getImageUrl());
+          console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
         }
       </script>
       <%- include('../partials/footer.ejs') %>

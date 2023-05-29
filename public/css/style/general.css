@@ -183,9 +183,12 @@ button {
   min-width: 50rem;
   flex-direction: column;
   gap: 3rem;
-  padding: 4.4rem;
   border-radius: 11px;
   background-color: var(--white-color);
+}
+
+.form--autentification {
+  padding: 4.4rem;
 }
 
 .sign-in--content {
