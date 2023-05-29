@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/style/style.css" />
     <link rel="stylesheet" href="/css/style/cars.css" />
     <link rel="stylesheet" href="/css/style/general.css" />
+    <link rel="stylesheet" href="/css/style/singleCar.css" />
     <link rel="stylesheet" href="/css/queries/queries.css" />
 
     <!-- ICON -->
@@ -28,17 +29,31 @@
       rel="stylesheet"
     />
 
-    <title>VehiGo | <%= car.car_model %> <%= car.car_brand %> </title>
+    <title>VehiGo | <%= car.car_model %> <%= car.car_brand %></title>
   </head>
   <body>
     <%- include('../partials/header') %>
-    
-    <main>
 
+    <main>
+      <section class="single--car--section container whitespace">
+        <div class="active--car--image">
+          <img
+            src="/images/carsPage/bmwX6m.png"
+            alt="This is the photo of active car"
+          />
+        </div>
+        <div class="single--car-content">
+          <p class="single--car--type">Sedan</p>
+          <h1 class="secondary-heading">Bmw X6M</h1>
+          <p class="single--car--year">Godina: <strong>2012</strong></p>
+          <p class="single--car--price">40€/dan</p>
+
+          <button class="reservation--button">Rezerviraj</button>
+        </div>
+      </section>
     </main>
 
     <%- include('../partials/footer') %>
-    
 
     <!-- ICONS -->
     <script
