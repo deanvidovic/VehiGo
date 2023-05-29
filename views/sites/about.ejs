@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/style/cars.css" />
     <link rel="stylesheet" href="./css/style/general.css" />
     <link rel="stylesheet" href="./css/queries/queries.css" />
+    <link rel="stylesheet" href="./css/style/about.css" />
 
     <!-- ICON -->
     <link rel="icon" href="./images/brand/favicon.png" />
@@ -28,11 +29,34 @@
       rel="stylesheet"
     />
 
-    <title>VehiGo | Započnite prijavu!</title>
+    <title>VehiGo | Upoznajete nas bolje!</title>
   </head>
   <body>
     <%- include('../partials/header.ejs') %>
-    <main></main>
+    <main>
+      <section class="container about--text">
+        <p class="subheading">&mdash; O nama &mdash;</p>
+        <h1 class="secondary-heading about--heading">Upoznajte se s nama</h1>
+        <p class="text--content about--text">
+          Dobrodošli na našu rent-a-car stranicu! Pružamo visokokvalitetne
+          usluge iznajmljivanja automobila po pristupačnim cijenama. Naš vozni
+          park nudi raznolikost vozila, od kompaktnih automobila do prostranih
+          SUV-ova. Svi automobili su redovito održavani i čisti. Naša stručna
+          ekipa je uvijek dostupna za podršku i pružanje korisnih informacija.
+          Nudimo dodatne usluge kao što su prijevoz do zračne luke i prilagođeni
+          paketi. Vaše zadovoljstvo je naš prioritet, te stoga težimo pružanju
+          nevjerojatnog iskustva i besprijekorne usluge. Rezervirajte vozilo s
+          nama i učinite svoja putovanja ugodnima, praktičnima i nezaboravnima.
+          Kontaktirajte nas danas!
+        </p>
+      </section>
+      <hr class="hr hr-home" />
+      <section class="ceo--text container">
+        <div class="image--ceo">
+          <img src="./public/images/brand/ceo.jpg" alt="Image of ceo" />
+        </div>
+      </section>
+    </main>
     <%- include('../partials/footer.ejs') %>
     <script src="./js/script.js"></script>
 
