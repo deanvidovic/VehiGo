@@ -67,12 +67,39 @@
         </div>
       </section>
       <section class="single--car--description container">
-        <div class="description--item"></div>
-        <div class="description--item"></div>
-        <div class="description--item"></div>
-        <div class="description--item"></div>
-        <div class="description--item"></div>
-        <div class="description--item"></div>
+        <div class="description--item">
+          <ion-icon name="map-outline" class="single--car--icon"></ion-icon>
+          <p class="single--car-desc"><%=car.car_kilometers%> km</p>
+        </div>
+        <div class="description--item">
+          <ion-icon
+            name="speedometer-outline"
+            class="single--car--icon"
+          ></ion-icon>
+          <p class="single--car-desc"><%=car.car_max_speed%> km/h</p>
+        </div>
+        <div class="description--item">
+          <ion-icon
+            name="stats-chart-outline"
+            class="single--car--icon"
+          ></ion-icon>
+          <p class="single--car-desc"><%=car.car_fuel_consumption%> l/100km</p>
+        </div>
+        <div class="description--item">
+          <ion-icon name="people-outline" class="single--car--icon"></ion-icon>
+          <p class="single--car-desc"><%=car.car_seats%> seats</p>
+        </div>
+        <div class="description--item">
+          <ion-icon
+            name="color-fill-outline"
+            class="single--car--icon"
+          ></ion-icon>
+          <p class="single--car-desc"><%=car.car_fuel_type%></p>
+        </div>
+        <div class="description--item">
+          <ion-icon name="flash-outline" class="single--car--icon"></ion-icon>
+          <p class="single--car-desc"><%=car.car_horse_power%> ks</p>
+        </div>
       </section>
     </main>
 

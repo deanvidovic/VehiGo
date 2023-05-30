@@ -68,6 +68,42 @@
   gap: 1.2rem;
 }
 
+.single--car--description {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 3.6rem;
+  row-gap: 3.6rem;
+  background-color: var(--white-color);
+  border-radius: 9px;
+  padding: 3.6rem;
+  margin-bottom: 9.8rem;
+}
+
+.description--item {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1.2rem;
+  margin-left: 9.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.5rem solid var(--color-primary-dark);
+}
+
+.single--car--icon {
+  width: 3.6rem;
+  height: 3.6rem;
+  color: var(--color-primary-dark);
+}
+
+.single--car-desc {
+  font-size: 4.8rem;
+  font-weight: 300;
+  color: var(--dark-color);
+}
+
 /* 
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
