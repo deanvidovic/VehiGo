@@ -23,8 +23,52 @@
 }
 
 .single--car-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  /* align-items: center; */
+  /* justify-content: left; */
+}
+
+.single--car--year {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.single--car--price {
+  font-size: 3rem;
+}
+
+.calendar label {
+  font-size: 1.6rem;
 }
 
 .reservation--button {
-  height: 100%;
+  margin-top: 3.6rem;
+  height: 4rem;
+  width: 50%;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--white-color);
+  font-weight: 700;
 }
+
+.reservation--form {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.calendar {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* 
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/

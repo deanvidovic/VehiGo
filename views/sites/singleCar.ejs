@@ -37,24 +37,48 @@
     <main>
       <section class="single--car--section container whitespace">
         <div class="active--car--image">
-          <img
-            src="/images/carsPage/bmwX6m.png"
-            alt="This is the photo of active car"
-          />
+          <img src="<%= car.car_url %>" alt="This is the photo of active car" />
         </div>
         <div class="single--car-content">
           <p class="single--car--type">Sedan</p>
-          <h1 class="secondary-heading">Bmw X6M</h1>
-          <p class="single--car--year">Godina: <strong>2012</strong></p>
-          <p class="single--car--price">40€/dan</p>
+          <h1 class="secondary-heading">
+            <%=car.car_model%> <%= car.car_brand %>
+          </h1>
+          <p class="single--car--year">
+            Godina: <strong><%= car.car_year %></strong>
+          </p>
+          <p class="single--car--price">
+            <strong><%= car.car_price %></strong> €/dan
+          </p>
 
-          <button class="reservation--button">Rezerviraj</button>
+          <div class="reservation--form">
+            <div class="calendar">
+              <label for="start--date" class="reservation--label">Od:</label>
+              <input type="date" id="start--date" />
+            </div>
+
+            <div class="calendar">
+              <label for="end--date">Do:</label>
+              <input type="date" id="end--date" />
+            </div>
+
+            <button class="reservation--button">Rezerviraj</button>
+          </div>
         </div>
+      </section>
+      <section class="single--car--description container">
+        <div class="description--item"></div>
+        <div class="description--item"></div>
+        <div class="description--item"></div>
+        <div class="description--item"></div>
+        <div class="description--item"></div>
+        <div class="description--item"></div>
       </section>
     </main>
 
     <%- include('../partials/footer') %>
 
+    <script src="/js/singleCar.js"></script>
     <!-- ICONS -->
     <script
       type="module"

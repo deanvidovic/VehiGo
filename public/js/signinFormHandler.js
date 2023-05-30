@@ -1,3 +1,4 @@
+"use script";
 const form = document.querySelector("#signinForm");
 const email_error = document.querySelector(".handle--error--mail");
 const password_error = document.querySelector(".handle--error--password");
