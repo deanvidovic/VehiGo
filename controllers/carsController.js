@@ -32,12 +32,11 @@ module.exports.single_car = async (req, res) => {
 
 module.exports.reserve = async (req, res) => {
   const { reservation_car_id, reservation_start, reservation_end } = req.body;
-
   try {
     const overlappingReservation = await Reservation.findOne({
       reservation_car_id,
-      reservation_start: { $lt: reservation_end },
-      reservation_end: { $gt: reservation_start }
+      reservation_start: { $lte: reservation_end },
+      reservation_end: { $gte: reservation_start }
     });
 
     if (overlappingReservation) {
@@ -55,7 +54,8 @@ module.exports.reserve = async (req, res) => {
       reservation_end
     });
 
-    res.status(201).json({ reservation });
+    const success = { success: 'Uspjesno ste rezervirali automobil!' };
+    res.status(201).json({ reservation, success });
 
   } catch (err) {
     const errors = handleErrors(err) 

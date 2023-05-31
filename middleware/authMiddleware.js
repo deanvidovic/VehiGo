@@ -43,5 +43,19 @@ const checkUser = (req, res, next) => {
     }
 }
 
+function authenticateToken(req, res, next) {
+    const token = req.cookies.jwt;
+  
+    jwt.verify(token, 'e alo bidibao', (err, user) => {
+      if (err) {
+        return res.sendStatus(401);
+      }
+  
+      req.customer = customer;
+  
+      next();
+    });
+}
+
 
 module.exports = { requireAuth, checkUser }

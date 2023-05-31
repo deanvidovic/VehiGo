@@ -13,8 +13,6 @@ form.addEventListener("submit", async (e) => {
   const reservation_start = form.start.value;
   const reservation_end = form.end.value;
 
-  //console.log(license_number, first_name, last_name, address, city, email, password);
-
   try {
     const res = await fetch(url, {
       method: "POST",
@@ -29,10 +27,14 @@ form.addEventListener("submit", async (e) => {
     });
 
     const data = await res.json();
-    //console.log(data);
+    console.log(data);
 
     if (data.errors) {
       car_error.textContent = data.errors.car_error;
+    }
+
+    if (data.reservation) {
+      car_error.textContent = data.success.success;
     }
 
 
