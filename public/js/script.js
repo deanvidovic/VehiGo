@@ -11,6 +11,8 @@ const rightArr = document.querySelector(".right-arrow");
 const carImg = document.querySelector(".car-image");
 const modelsSpec = document.querySelector(".models-content");
 
+const mainHeader = document.querySelector(".main--header");
+
 /**************HOME PAGE*************/
 
 //Header
