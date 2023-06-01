@@ -38,6 +38,7 @@
       <section class="single--car--section container whitespace">
         <div class="active--car--image">
           <img src="<%= car.car_url %>" alt="This is the photo of active car" />
+          <div class="handle--errors" id="car--error"></div>
         </div>
         <div class="single--car-content">
           <p class="single--car--type">Sedan</p>
@@ -51,19 +52,21 @@
             <strong><%= car.car_price %></strong> €/dan
           </p>
 
-          <div class="reservation--form">
-            <div class="calendar">
-              <label for="start--date" class="reservation--label">Od:</label>
-              <input type="date" id="start--date" />
+          <form method="POST" id="reservationForm">
+            <div class="reservation--form">
+              <div class="calendar">
+                <label for="start--date" class="reservation--label">Od:</label>
+                <input type="date" name="start" id="start--date" />
+              </div>
+  
+              <div class="calendar">
+                <label for="end--date">Do:</label>
+                <input type="date" name="end" id="end--date" />
+              </div>
+  
+              <button class="reservation--button">Rezerviraj</button>
             </div>
-
-            <div class="calendar">
-              <label for="end--date">Do:</label>
-              <input type="date" id="end--date" />
-            </div>
-
-            <button class="reservation--button">Rezerviraj</button>
-          </div>
+          </form>
         </div>
       </section>
       <section class="single--car--description container">
@@ -106,6 +109,7 @@
     <%- include('../partials/footer') %>
 
     <script src="/js/singleCar.js"></script>
+    <script src="/js/singleCarFormHandler.js"></script>
     <script src="/js/dropdown.js"></script>
     <!-- ICONS -->
     <script
