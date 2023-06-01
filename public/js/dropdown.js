@@ -1,8 +1,8 @@
 "use strict";
 
-const dropdown = document.querySelector(".dropdown");
-const dropdownActive = document.querySelector(".menu-item.dropdown--active");
-const dropdownItems = document.querySelectorAll(".dropdown--items");
+// const dropdown = document.querySelector(".dropdown");
+// const dropdownActive = document.querySelector(".menu-item.dropdown--active");
+// const dropdownItems = document.querySelectorAll(".dropdown--items");
 
 // let flag = false;
 

@@ -110,6 +110,7 @@
   column-gap: 1.8rem;
   row-gap: 3rem;
   padding: 0 1.8rem;
+  min-width: 100%;
 }
 
 .car-logos {
@@ -460,7 +461,7 @@
   visibility: hidden;
 }
 
-.dropdown.active {
+.dropdown-menu:hover .dropdown {
   opacity: 1;
   user-select: auto;
   visibility: visible;

@@ -40,11 +40,16 @@
   top: -1rem;
   left: -1rem;
   background-color: var(--light-red);
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 3.6rem;
+  height: 3.6rem;
   padding: 1.8rem;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.4s all ease;
+}
+
+.reservation--card--delete:hover {
+  transform: scale(1.1);
 }
 
 .reservation--card--content {

@@ -24,19 +24,21 @@
           <li><a href="/about" class="menu-item item3 hover">O nama</a></li>
           <div class="action--container--nav">
             <% if (customer) { %>
-            <li>
-              <a href="#" class="menu-item dropdown--active"
-                ><%= customer.customer_first_name %></a
-              >
-            </li>
-            <ul class="dropdown">
+            <div class="dropdown-menu">
               <li>
-                <a href="/reservation" class="dropdown--items"
-                  >Moje rezervacije</a
+                <a href="#" class="menu-item dropdown--active"
+                  ><%= customer.customer_first_name %></a
                 >
               </li>
-              <li><a href="/logout" class="dropdown--items">Odjava</a></li>
-            </ul>
+              <ul class="dropdown">
+                <li>
+                  <a href="/reservation" class="dropdown--items"
+                    >Moje rezervacije</a
+                  >
+                </li>
+                <li><a href="/logout" class="dropdown--items">Odjava</a></li>
+              </ul>
+            </div>
             <% } else { %>
             <li>
               <a href="/signin" class="menu-item item4 hover">Prijavi se</a>
