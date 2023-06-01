@@ -2,14 +2,7 @@ const mongoose = require('mongoose');
 const Reservation = require('../models/Reservation');
 
 module.exports.reservation = async (req, res) => {
-  try {
-    const collection = mongoose.connection.collection('cars'); 
-    const cars = await collection.find().toArray();
-    
-    res.render('../views/sites/cars', { cars });
-  } catch (err) {
-    console.log("Greska pri dohvacanju")
-  }
+  res.render('../views/sites/reservations');
 };
 
 
