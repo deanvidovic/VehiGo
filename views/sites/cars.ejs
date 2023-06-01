@@ -129,10 +129,12 @@
               />
               <hr />
               <div class="card--info">
-                <h1 class="card--heading">
-                  <%=car.car_model%> <%=car.car_brand%>
-                </h1>
-                <p class="car--price"><%=car.car_price%> €/dan</p>
+                <div class="name--and--price">
+                  <h1 class="card--heading">
+                    <%=car.car_model%> <%=car.car_brand%>
+                  </h1>
+                  <p class="car--price"><%=car.car_price%> €/dan</p>
+                </div>
                 <a href="/cars/<%=car._id%>" class="reservation--button"
                   >Rezerviraj</a
                 >

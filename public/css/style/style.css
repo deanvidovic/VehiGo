@@ -163,6 +163,7 @@
 
 .spec--desc {
   font-size: 3rem;
+  white-space: nowrap;
 }
 
 .spec--important {
@@ -255,6 +256,7 @@
   line-height: 1.5;
   flex-direction: column;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .heading-desc span:nth-child(2) {
