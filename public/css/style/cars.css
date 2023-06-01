@@ -61,7 +61,7 @@
   height: 2.4rem;
 }
 
-.car--card {
+/* .car--card {
   min-width: 20rem;
   flex-direction: column;
   border: 0.1rem solid var(--white-color);
@@ -109,7 +109,55 @@
 .car--price {
   font-size: 1.6rem;
   font-weight: 700;
+} */
+
+.card--car {
+  padding: 4.4rem;
+  background-color: var(--smooth-dark);
+  border-radius: 9px;
+  box-shadow: 0.2rem 0.2rem 0rem var(--color-primary);
+  transition: all 0.4s ease;
 }
+
+.card--car:hover {
+  transform: translate(-0.4rem, -0.4rem);
+  box-shadow: 0.5rem 0.5rem 0rem var(--color-primary);
+}
+
+.card--car .car--img {
+  max-width: 40rem;
+  margin-bottom: 1.2rem;
+}
+
+.card--info {
+  margin-top: 1.2rem;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 0.8fr 0.2fr;
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.card--heading {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.car--price {
+  font-size: 1.8rem;
+  grid-row: 2/3;
+}
+
+.reservation--button {
+  display: block;
+  background-color: var(--color-primary);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 4px;
+  font-size: 2.4rem;
+  color: var(--white-color);
+}
+
 /* 
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98

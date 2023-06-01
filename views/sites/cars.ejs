@@ -104,7 +104,7 @@
         <hr />
         <div class="cars--grid">
           <% cars.forEach(car => { %>
-          <a href="/cars/<%= car._id %>">
+          <!-- <a href="/cars/<%= car._id %>">
             <article class="car--card">
               <img
                 src="<%= car.car_url %>"
@@ -118,7 +118,27 @@
                 <p class="car--price">Cijena (€/h): <%= car.car_price %> €</p>
               </aside>
             </article>
-          </a>
+          </a> -->
+
+          <article class="card--car">
+            <a href="/cars/<%=car._id%>">
+              <img
+                src="<%= car.car_url %>"
+                alt="This is image of car in the grid"
+                class="car--img"
+              />
+              <hr />
+              <div class="card--info">
+                <h1 class="card--heading">
+                  <%=car.car_model%> <%=car.car_brand%>
+                </h1>
+                <p class="car--price"><%=car.car_price%> €/dan</p>
+                <a href="/cars/<%=car._id%>" class="reservation--button"
+                  >Rezerviraj</a
+                >
+              </div>
+            </a>
+          </article>
           <% }) %>
         </div>
       </main>
