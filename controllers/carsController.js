@@ -5,15 +5,30 @@ module.exports.reservation = async (req, res) => {
   res.render('../views/sites/reservations');
 };
 
+module.exports.cars_post = async (req, res) => {
+  try {
+    const collection = mongoose.connection.collection('cars'); 
+    const cars = await collection.find().toArray();
+
+    
+    res.status(201).json({ cars })
+    
+  } catch (err) {
+    console.log("Greska pri dohvacanju", err)
+  }
+};
+
 
 module.exports.cars_get = async (req, res) => {
   try {
     const collection = mongoose.connection.collection('cars'); 
     const cars = await collection.find().toArray();
+
     
     res.render('../views/sites/cars', { cars });
+    
   } catch (err) {
-    console.log("Greska pri dohvacanju")
+    console.log("Greska pri dohvacanju", err)
   }
 };
 
