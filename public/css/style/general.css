@@ -52,6 +52,8 @@
   --white-color: #fff;
   --black-color: rgb(38, 43, 44);
   --danger-text: #9a0012;
+  --approved-color: #88d453;
+  --approved-color-dark: #6ca742;
 }
 
 * {
@@ -59,6 +61,7 @@
   padding: 0;
   box-sizing: border-box;
   line-height: 1;
+  transition: 0.4s all ease;
 }
 
 html {
