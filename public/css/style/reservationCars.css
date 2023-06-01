@@ -1,0 +1,59 @@
+.reservation--cards {
+  margin-top: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4.4rem;
+}
+
+.reservation--card {
+  position: relative;
+  padding: 4.4rem;
+  background-color: var(--smooth-dark);
+  border-radius: 9px;
+  box-shadow: 0.6rem 0.6rem 0rem var(--color-primary);
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 3.2rem;
+  margin: 0 auto;
+}
+
+.reservation--card:hover {
+  transform: scale(1.02);
+}
+
+.reservation--card--heading {
+  font-size: 4.4rem;
+}
+
+.reservation--card--price {
+  font-size: 2.4rem;
+}
+
+.reservation--card--delete {
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  background-color: var(--light-red);
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 1.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.reservation--card--content {
+  display: flex;
+  gap: 1.8rem;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.reservation--card--message {
+  font-size: 1.8rem;
+}

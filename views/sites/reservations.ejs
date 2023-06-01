@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/style/general.css" />
     <link rel="stylesheet" href="./css/queries/queries.css" />
     <link rel="stylesheet" href="./css/style/about.css" />
+    <link rel="stylesheet" href="./css/style/reservationCars.css" />
 
     <!-- ICON -->
     <link rel="icon" href="./images/brand/favicon.png" />
@@ -35,7 +36,27 @@
     <%- include('../partials/header.ejs') %>
     <main>
       <section class="container">
-        <h1>Ovo je bas gas</h1>
+        <p class="subheading">&mdash; Vaše rezervacije</p>
+        <h1 class="secondary-heading">Tu pronađite vaše aktivne rezervacije</h1>
+        <main class="reservation--cards whitespace">
+          <div class="reservation--card">
+            <img
+              src="./images/carsPage/AB 1234 CD.png"
+              alt="This is photo of reserved car"
+            />
+            <div class="reservation--card--content">
+              <h1 class="reservation--card--heading">Porsche Macan</h1>
+              <p class="reservation--card--price">61.5€/dan</p>
+              <p class="reservation--card--message">
+                Rezervirali ste od: 13.07.2004 do 30.10.2004
+              </p>
+            </div>
+            <ion-icon
+              name="trash-outline"
+              class="reservation--card--delete"
+            ></ion-icon>
+          </div>
+        </main>
       </section>
     </main>
     <%- include('../partials/footer.ejs') %>
