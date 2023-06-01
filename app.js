@@ -37,7 +37,7 @@ mongoose
 
 // routes
 app.get("*", checkUser);
-app.get("/", (req, res) => {
+app.get("/", checkUser, (req, res) => {
   res.render("index");
 });
 

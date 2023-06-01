@@ -4,6 +4,11 @@ const url = window.location.href;
 const reservation_car_id = url.split("/").pop();
 const car_error = document.querySelector("#car--error");
 
+const cookie = document.cookie
+const reservation_user_id = cookie.split(";").find(item => item.includes("id=")).split("=")[1].trim();
+// console.log(reservation_user_id);
+
+
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -19,7 +24,8 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify({
         reservation_car_id,
         reservation_start,
-        reservation_end
+        reservation_end,
+        reservation_user_id
       }),
       headers: {
         "Content-Type": "application/json",

@@ -1,6 +1,18 @@
 const mongoose = require('mongoose');
 const Reservation = require('../models/Reservation');
 
+module.exports.reservation = async (req, res) => {
+  try {
+    const collection = mongoose.connection.collection('cars'); 
+    const cars = await collection.find().toArray();
+    
+    res.render('../views/sites/cars', { cars });
+  } catch (err) {
+    console.log("Greska pri dohvacanju")
+  }
+};
+
+
 module.exports.cars_get = async (req, res) => {
   try {
     const collection = mongoose.connection.collection('cars'); 
@@ -31,12 +43,13 @@ module.exports.single_car = async (req, res) => {
 };
 
 module.exports.reserve = async (req, res) => {
-  const { reservation_car_id, reservation_start, reservation_end } = req.body;
+  const { reservation_car_id, reservation_start, reservation_end, reservation_user_id } = req.body;
   try {
     const overlappingReservation = await Reservation.findOne({
       reservation_car_id,
       reservation_start: { $lte: reservation_end },
-      reservation_end: { $gte: reservation_start }
+      reservation_end: { $gte: reservation_start },
+      reservation_user_id
     });
 
     if (overlappingReservation) {
@@ -48,15 +61,20 @@ module.exports.reserve = async (req, res) => {
       return res.status(400).json({errors});
     }
 
-    const reservation = await Reservation.create({
-      reservation_car_id,
-      reservation_start,
-      reservation_end
-    });
-
-    const success = { success: 'Uspjesno ste rezervirali automobil!' };
-    res.status(201).json({ reservation, success });
-
+    if (reservation_user_id == undefined) {
+      res.redirect('/signin');
+    } else {
+      const reservation = await Reservation.create({
+        reservation_car_id,
+        reservation_start,
+        reservation_end,
+        reservation_user_id
+      });
+  
+      const success = { success: 'Uspjesno ste rezervirali automobil!' };
+      res.status(201).json({ reservation, success });
+    }
+    
   } catch (err) {
     const errors = handleErrors(err) 
     res.status(400).json({ errors })

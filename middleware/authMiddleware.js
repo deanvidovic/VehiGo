@@ -33,6 +33,7 @@ const checkUser = (req, res, next) => {
             } else {
                 console.log(decoded_token);
                 let customer = await Customer.findById(decoded_token.id);
+                res.cookie('id', decoded_token.id);
                 res.locals.customer = customer;
                 next();
             } 
@@ -43,19 +44,6 @@ const checkUser = (req, res, next) => {
     }
 }
 
-function authenticateToken(req, res, next) {
-    const token = req.cookies.jwt;
-  
-    jwt.verify(token, 'e alo bidibao', (err, user) => {
-      if (err) {
-        return res.sendStatus(401);
-      }
-  
-      req.customer = customer;
-  
-      next();
-    });
-}
 
 
 module.exports = { requireAuth, checkUser }
