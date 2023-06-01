@@ -1,11 +1,46 @@
-/* BELOW 1378px
-  BELOW 87em
+/* BELOW 1152px
+  BELOW 72em
 */
 
-/* @media (max-width: 87em) {
-  /* HOME SCREEN 
-  .hero--section {
-    padding: 0 12.8rem;
+@media (max-width: 72em) {
+  html {
+    font-size: 56.25%;
   }
-} 
-*/
+
+  .main--cars {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr 0.5fr 0.1fr 0.2fr;
+  }
+
+  .models {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  .car-image {
+    grid-column: 1/-1;
+  }
+}
+
+/* BELOW 944px 59em */
+
+@media (max-width: 59em) {
+  .features--boxes {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features--box {
+    max-width: 70%;
+  }
+
+  .features--icon {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .features--heading {
+    font-size: 3rem;
+  }
+}

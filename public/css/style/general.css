@@ -98,6 +98,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0 0 0 1000px inset rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
 }
 
 a:link,
@@ -119,7 +120,8 @@ button {
   color: var(--dark-color);
 }
 .container {
-  max-width: 130rem;
+  max-width: 120rem;
+  padding: 0 3.2rem;
   margin: 0 auto;
 }
 

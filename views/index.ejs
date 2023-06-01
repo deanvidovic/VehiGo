@@ -28,12 +28,14 @@
     
   <%- include('./partials/header.ejs') %>
     <main>
-        <section class="hero--section whitespace container">
+      <section class="hero--section">
+        <div class="container">
+          <div class="main--cars">
             <article class="car-logos d-flex-center">
               <div class="arrow">
                 <ion-icon name="chevron-back-outline" class="arrow-icon left-arrow"></ion-icon>
               </div>
-              <!--Svaki id mora biti ime marke auta, to isto stavi i kod path za sliku ovdje umjesto mercedes stavi to $row["name"].. .-->
+
               <div class="logo" id="mercedes">
                 <img src="/images/brand/mercedes.png" alt="Logo of mercedes">
               </div>
@@ -53,7 +55,6 @@
               </div>
             </article>
             <article class="car-image d-flex-center">
-              <!-- <img src="./images/mainCars/vwArteon.png"> -->
             </article>
             <article class="book-car--btn d-flex-center">
               <button class="bookBtn"><a href="/cars">Vidi više</a></button>
@@ -66,7 +67,10 @@
                 <div class="note-description d-flex-center"><span>cijena za</span> <span>minimalno</span><span> 7 dana</span></div>
               </div>
             </article>
-        </section>
+          </div>
+        </div>
+      </section>
+        
         <hr class="hr ">
         <section class="services--section container whitespace">
           <p class="subheading">&mdash; Naše usluge</p>

@@ -103,14 +103,20 @@
 
 /* HERO CONTENT */
 .hero--section {
+  margin-top: 4.4rem;
+
+  padding: 0 1.8rem;
+  min-width: 100%;
+}
+
+.main--cars {
   display: grid;
   grid-template-columns: 0.2fr 0.6fr 0.2fr;
   grid-template-rows: 0.25fr 0.5fr 0.25fr;
-  margin-top: 4.4rem;
   column-gap: 1.8rem;
   row-gap: 3rem;
-  padding: 0 1.8rem;
-  min-width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .car-logos {
