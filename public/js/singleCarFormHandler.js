@@ -8,6 +8,9 @@ const cookie = document.cookie
 const reservation_user_id = cookie.split(";").find(item => item.includes("id=")).split("=")[1].trim();
 // console.log(reservation_user_id);
 
+const img = document.querySelector("body > main > section.single--car--section.container.whitespace > div.active--car--image > img");
+const reservation_car_url = img.src;
+
 
 
 form.addEventListener("submit", async (e) => {
@@ -23,6 +26,7 @@ form.addEventListener("submit", async (e) => {
       method: "POST",
       body: JSON.stringify({
         reservation_car_id,
+        reservation_car_url,
         reservation_start,
         reservation_end,
         reservation_user_id

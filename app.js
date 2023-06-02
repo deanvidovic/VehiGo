@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
 const carRoutes = require("./routes/carRoutes");
 const aboutRoutes = require("./routes/aboutRoutes");
-
 // middlewares
 const cookieParser = require("cookie-parser");
 const { checkUser } = require("./middleware/authMiddleware");

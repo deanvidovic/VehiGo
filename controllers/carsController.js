@@ -1,9 +1,33 @@
 const mongoose = require('mongoose');
 const Reservation = require('../models/Reservation');
 
-module.exports.reservation = async (req, res) => {
-  res.render('../views/sites/reservations');
+module.exports.reservation_get = async (req, res) => {
+  try {
+    const collectionCars = mongoose.connection.collection('cars'); 
+    const collectionReservation = mongoose.connection.collection('reservations'); 
+    const cars = await collectionCars.find().toArray();
+    const reservations = await collectionReservation.find().toArray();
+    // console.log(reservations[0].reservation_car_url);
+    res.render('../views/sites/reservations', { reservations, cars });
+    
+  } catch (err) {
+    console.log("Greska pri dohvacanju", err)
+  }
 };
+
+module.exports.reservation_delete = (req, res) => {
+  const { id } = req.body;
+  console.log(req.body);
+  Reservation.findByIdAndDelete(id)
+    .then(result => {
+      res.json({ redirect: '/reservation' });
+    })
+    .catch(err => {
+      console.log(err);
+    })
+};
+
+
 
 module.exports.cars_post = async (req, res) => {
   try {
@@ -51,10 +75,11 @@ module.exports.single_car = async (req, res) => {
 };
 
 module.exports.reserve = async (req, res) => {
-  const { reservation_car_id, reservation_start, reservation_end, reservation_user_id } = req.body;
+  const { reservation_car_id, reservation_car_url, reservation_start, reservation_end, reservation_user_id } = req.body;
   try {
     const overlappingReservation = await Reservation.findOne({
       reservation_car_id,
+      reservation_car_url,
       reservation_start: { $lte: reservation_end },
       reservation_end: { $gte: reservation_start },
       reservation_user_id
@@ -74,6 +99,7 @@ module.exports.reserve = async (req, res) => {
     } else {
       const reservation = await Reservation.create({
         reservation_car_id,
+        reservation_car_url,
         reservation_start,
         reservation_end,
         reservation_user_id

@@ -1,9 +1,5 @@
 "use script";
 
-
-
-
-
 const filterButton = document.querySelectorAll(".filter--btn");
 const paragraph = document.querySelector(".filter--btn p");
 
@@ -21,16 +17,12 @@ filterBtn.forEach(btn => {
                   "Content-Type": "application/json",
                 }
             });
-        
             const data = await res.json();
             const arr = data.cars;
             const arrNames = new Set();
             arr.forEach(car => {
                 arrNames.add(car.car_brand); 
             });
-
-
-       
           } catch (err) {
             console.log(err);
           }

@@ -2,13 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- GOOGLE -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta
-      name="google-signin-client_id"
-      content="914111657030-g40ppfst3gr183ckcjhcn0m8tdp4on4h.apps.googleusercontent.com"
-    />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -34,23 +27,22 @@
       rel="stylesheet"
     />
 
-    <title>VehiGo | Započnite prijavu!</title>
+    <title>VehiGo | Upoznajete nas bolje!</title>
   </head>
   <body>
-    <%- include('../partials/header.ejs') %>
     <main>
-      <section
+        <section
         class="form--section sing-in--form container d-flex-center whitespace"
       >
         <form id="signinForm" class="form form--autentification d-flex-center">
-          <h1 class="form--heading">&mdash; Prijavi se &mdash;</h1>
+          <h1 class="form--heading">&mdash; Administrator &mdash;</h1>
 
           <div class="sign-in--content">
             <input
-              id="customer_email"
-              name="customer_email"
-              type="email"
-              placeholder="Email adresa"
+              id="admin_username"
+              name="admin_username"
+              type="text"
+              placeholder="Korisnicko ime"
               class="form--input"
             />
             <!-- DODATI CSS ZA OVOO CUUCKOO -->
@@ -59,10 +51,10 @@
 
           <div class="sign-in--content">
             <input
-              id="customer_password"
-              name="customer_password"
+              id="admin_password"
+              name="admin_password"
               type="password"
-              placeholder="Password"
+              placeholder="Lozinka"
               class="form--input"
             />
             <!-- DODATI CSS ZA OVOO CUUCKOO -->
@@ -72,17 +64,12 @@
           <div class="submit d-flex-center">
             <!-- DODATI CSS ZA OVOO CUUCKOO -->
             <button class="form--button main--button">Prijavi se</button>
-            <button class="form--button secondary--button">
-              <a href="/signup">Nemas racun?</a>
-            </button>
           </div>
         </form>
       </section>
-      <%- include('../partials/footer.ejs') %>
-      <script src="./js/signinFormHandler.js"></script>
     </main>
 
-    <script src="/js/dropdown.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- ICONS -->
     <script

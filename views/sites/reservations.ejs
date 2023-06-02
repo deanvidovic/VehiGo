@@ -39,28 +39,63 @@
         <p class="subheading">&mdash; Vaše rezervacije</p>
         <h1 class="secondary-heading">Tu pronađite vaše aktivne rezervacije</h1>
         <main class="reservation--cards whitespace">
-          <div class="reservation--card">
-            <img
-              src="./images/carsPage/AB 1234 CD.png"
-              alt="This is photo of reserved car"
-            />
-            <div class="reservation--card--content">
-              <h1 class="reservation--card--heading">Porsche Macan</h1>
-              <p class="reservation--card--price">61.5€/dan</p>
-              <p class="reservation--card--message">
-                Rezervirali ste od: 13.07.2004 do 30.10.2004
-              </p>
-            </div>
-            <ion-icon
-              name="trash-outline"
-              class="reservation--card--delete"
-            ></ion-icon>
-          </div>
+
+          <% 
+            let auto = null;
+            reservations.forEach(reservation => {
+              cars.forEach(car => {
+                if (reservation.reservation_car_id == car._id) {
+                  auto = car;
+                }
+              });
+              
+            })  
+
+            function getDateFromIsoDate(isoDate) {
+              const date = new Date(isoDate);
+
+              const day = date.getDate();
+              const month = date.getMonth() + 1; 
+              const year = date.getFullYear();
+
+              const formattedDate = `${day}.${month}.${year}`;
+              return formattedDate;
+            }
+          %>
+          
+          <% if (reservations.length > 0) { %>
+          
+            <% reservations.forEach(reservation => { %>
+              <div class="reservation--card">
+                <img
+                  src="<%= reservation.reservation_car_url %>"
+                  alt="This is photo of reserved car"
+                />
+                <div class="reservation--card--content">
+                  <h1 class="reservation--card--heading"><%= auto.car_brand %></h1>
+                  <p class="reservation--card--price"><%= auto.car_price %> €/dan</p>
+                  <p class="reservation--card--message">
+                    Rezervirali ste od: <%= getDateFromIsoDate(reservation.reservation_start) %> do <%= getDateFromIsoDate(reservation.reservation_end) %>
+                  </p>
+                </div>
+                <ion-icon
+                  name="trash-outline"
+                  class="reservation--card--delete"
+                  data-doc="<%= reservation._id %>"
+                ></ion-icon>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <h1>nea niceg u rezervacijama</h1>
+            
+          <% } %>
+
         </main>
       </section>
     </main>
     <%- include('../partials/footer.ejs') %>
 
+    <script src="/js/reservationDelete.js"></script>
     <script src="/js/dropdown.js"></script>
 
     <!-- ICONS -->

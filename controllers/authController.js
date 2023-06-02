@@ -52,6 +52,10 @@ module.exports.signin_get = (req, res) => {
     res.render('../views/sites/signin', { });
 }
 
+module.exports.admin_get = (req, res) => {
+    res.render('../views/sites/admin', { });
+}
+
 module.exports.signup_post = async (req, res) => {
     // funkcija je asinkrona zbog toga sto treba await da ne bi bio promise u customeru
     const {
@@ -101,6 +105,26 @@ module.exports.signin_post = async (req, res) => {
 
     //Customer.login(customer_email, customer_password);
 }
+
+module.exports.admin_post = async (req, res) => {
+    const { admin_username, admin_password } = req.body;
+    
+    try {
+        const customer = await Customer.login(customer_email, customer_password);
+        const token = createToken(customer._id);
+        res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 }); 
+
+        res.status(200).json({ customer: customer._id })
+    } catch (err) {
+        const errors = handleErrors(err) 
+        res.status(400).json({ errors })
+    }
+
+    //Customer.login(customer_email, customer_password);
+}
+
+
+
 
 module.exports.logout_get = (req, res) => {
     res.cookie('jwt', '', { maxAge:1 });

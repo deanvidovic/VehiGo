@@ -6,6 +6,11 @@ const reservationSchema = new mongoose.Schema({
         unique: false
     },
 
+    reservation_car_url: {
+        type: String,
+        unique: false
+    },
+
     reservation_start: {
         type: Date,
         required: [true, 'Morate unijeti datum preuzimanja vozila!']
