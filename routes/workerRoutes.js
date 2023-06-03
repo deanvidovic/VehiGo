@@ -1,13 +1,17 @@
 const { Router } = require('express');
 const workerController = require('../controllers/workersController');
-const { requireWorkerAuth } = require('../middleware/workerMiddleware');
+const { requireAdminAuth } = require('../middleware/workerMiddleware');
 const router = Router();
 
 // VRATITI REQUREADMINAUTH
 
-router.get('/panel', workerController.get_cars)
-router.get('/panel-reservations', workerController.get_reservations) 
-router.get('/panel-workers', workerController.get_workers)
+router.get('/panel', requireAdminAuth, workerController.get_cars);
+router.get('/panel-reservations', requireAdminAuth, workerController.get_reservations) ;
+router.get('/panel-workers', requireAdminAuth, workerController.get_workers);
+
+router.get('/admin', workerController.admin_get); 
+router.post('/admin', workerController.admin_post);
+
 
 
 

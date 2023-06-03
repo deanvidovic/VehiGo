@@ -2,6 +2,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+
+
 // routes
 const authRoutes = require("./routes/authRoutes");
 const carRoutes = require("./routes/carRoutes");
@@ -10,6 +12,7 @@ const workerRoutes = require("./routes/workerRoutes");
 // middlewares
 const cookieParser = require("cookie-parser");
 const { checkUser } = require("./middleware/authMiddleware");
+const { isAdmin } = require('./middleware/workerMiddleware');
 
 // ============================================================================
 
@@ -37,7 +40,7 @@ mongoose
 
 // routes
 app.get("*", checkUser);
-app.get("/", checkUser, (req, res) => {
+app.get("/", isAdmin, (req, res) => {
   res.render("index");
 });
 

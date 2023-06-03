@@ -1,17 +1,15 @@
 const jwt = require('jsonwebtoken');
-// const Admin = require('../models/Admin');
-const mongoose = require('mongoose');
 
 const requireAdminAuth = (req, res, next) => {
-    const token = req.cookies.jwt;
+    const token = req.cookies.jwtw;
 
     if (token) {
-        jwt.verify(token, 'e alo bidibao admin', (err, decoded_token) => {
+        jwt.verify(token, 'e alo bidibao radnik', (err, decoded_token) => {
             if (err) {
-                console.log(err);
+                //console.log(err);
                 res.redirect('/admin');
             } else {
-                console.log(decoded_token);
+                //console.log(decoded_token);
                 next();
             }
         })
@@ -19,6 +17,25 @@ const requireAdminAuth = (req, res, next) => {
         res.redirect('/admin');
     }
 }
+
+const isAdmin = (req, res, next) => {
+    const token = req.cookies.jwtw;
+
+    if (token) {
+        jwt.verify(token, 'e alo bidibao radnik', (err, decoded_token) => {
+            if (err) {
+                return
+            } else {
+                res.redirect('/panel');
+                next();
+            }
+        })
+    } else {
+        return
+    }
+}
+
+
 
 
 // const checkAdmin = (req, res, next) => {
@@ -46,4 +63,4 @@ const requireAdminAuth = (req, res, next) => {
 
 
 
-module.exports = { requireAdminAuth }
+module.exports = { requireAdminAuth, isAdmin }

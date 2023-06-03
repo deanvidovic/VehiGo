@@ -5,39 +5,24 @@ const jwt = require('jsonwebtoken');
 const handleErrors = (err) => {
     //console.log(err.message, err.code);
     let errors = {
-        worker_identification_number: '',
-        worker_name: '',
-        worker_last_name: '',
-        worker_email: '',
-        worker_phone_number: '',
-        worker_address: '',
         worker_username: '',
         worker_password: ''
     };
 
-    if(err.message === 'Vase korisnicko ime nije tocno!') {
-        errors.worker_username = 'Vase korisnicko ime ne postoji!';
-    }
-
-    if(err.message === 'Vasa lozinka nije tocna!') {
-        errors.worker_password = 'Vasa lozinka nije tocna!';
-    }
-
-    if (err.code == 11000) {
-        errors.worker_email = 'Ovaj e-mail vec postoji.';
-        errors.worker_identification_number = 'Ovaj OIB vec postoji.';
-        return errors;
-    }
-
-    console.log(err.code)
-
-    if (err.message.includes('workers validation failed')) {
-        Object.values(err.errors).forEach(({ properties }) => {
-            errors[properties.path] = properties.message;
-        });
+    if(err.message === 'Vasa lozinka ili korisnicko ime nije tocno!') {
+        errors.worker_password = 'Vasa lozinka ili korisnicko ime nije tocno!';
     }
 
     return errors;
+}
+
+const maxAge = 1 * 24 * 60 * 60;
+const createWorkerToken = (id) => {
+    return jwt.sign({ id }, 'e alo bidibao radnik', { expiresIn: maxAge });
+}
+
+module.exports.admin_get = (req, res) => {
+    res.render('../views/sites/admin', { });
 }
 
 module.exports.get_cars = (req, res) => {
@@ -51,3 +36,31 @@ module.exports.get_reservations = (req, res) => {
 module.exports.get_workers = (req, res) => {
     res.render('../views/panel/partials/workers');
 }
+
+module.exports.admin_post = async (req, res) => {
+    const { admin_username, admin_password } = req.body;
+
+    try {
+        if (admin_username === "admin" && admin_password === "admin") {
+            const token = createWorkerToken(admin_username);
+            if (req.headers.cookie && (req.headers.cookie.includes('jwt') || req.headers.cookie.includes('id'))) {
+                res.cookie('jwt', '', { maxAge:1 });
+                res.cookie('id', '', { maxAge:1 });
+                res.cookie('jwtw', token, { httpOnly: true, maxAge: maxAge * 1000 });  
+                res.status(200).json({ admin: true });
+            } else {
+                res.cookie('jwtw', token, { httpOnly: true, maxAge: maxAge * 1000 }); 
+                res.status(200).json({ admin: true });
+            }
+        } else {
+            throw Error('Vasa lozinka ili korisnicko ime nije tocno!');
+        }
+
+    } catch (err) {
+        const errors = handleErrors(err) 
+        res.status(400).json({ errors })
+    }
+
+    //Customer.login(customer_email, customer_password);
+}
+
