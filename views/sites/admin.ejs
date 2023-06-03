@@ -11,6 +11,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style/style.css" />
+    <link rel="stylesheet" href="./css/style/admin.css" />
     <link rel="stylesheet" href="./css/style/general.css" />
     <link rel="stylesheet" href="./css/queries/queries.css" />
 
@@ -27,11 +28,14 @@
       rel="stylesheet"
     />
 
-    <title>VehiGo | Upoznajete nas bolje!</title>
+    <title>VehiGo | Private!</title>
   </head>
   <body>
-    <main>
-        <section
+    <header class="admin--header">
+      <%- include('../partials/header_admin.ejs') %>
+    </header>
+    <main class="admin--login">
+      <section
         class="form--section sing-in--form container d-flex-center whitespace"
       >
         <form id="signinForm" class="form form--autentification d-flex-center">
