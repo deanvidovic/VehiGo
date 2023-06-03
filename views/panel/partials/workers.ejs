@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/css/style/panel.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>VehiGo | Administracija</title>
+  </head>
+  <body>
+    <main class="admin--panel">
+        <%- include('../aside/aside.ejs') %>
+      <article class="content--admin">
+        <main class="admin--sections">
+            <section class="admin--section section--zaposlenici">
+                <h1 class="section--heading">Dodaj novog zaposlenika</h1>
+                <form class="form--admin--cars">
+                  <input type="text" placeholder="OIB" onkeypress="allowOnlyNumbers(event)" class="form--input--admin" />
+                  <div class="handle--error" id="worker_identification_number"></div>
+                  <input type="text" placeholder="Ime" class="form--input--admin" />
+                  <div class="handle--error" id="worker_name"></div>
+                  <input type="text" placeholder="Prezime" class="form--input--admin" />
+                  <div class="handle--error" id="worker_last_name"></div>
+                  <input type="email" placeholder="Email" class="form--input--admin"/>
+                  <div class="handle--error" id="worker_email"></div>
+                  <input type="text" placeholder="Kontakt mobitela" onkeypress="allowOnlyNumbers(event)" class="form--input--admin" />
+                  <div class="handle--error" id="worker_phone_number"></div>
+                  <input type="text" placeholder="Adresa stanovanja" class="form--input--admin" />
+                  <div class="handle--error" id="worker_address"></div>
+                  <input type="text" placeholder="Korisnicko ime" class="form--input--admin" />
+                  <div class="handle--error" id="worker_username"></div>
+                  <input type="password" placeholder="Lozinka" class="form--input--admin" />
+                  <div class="handle--error" id="worker_password"></div>
+                  <button class="form--submit--admin">Potvrdi unos</button>
+                </form>
+              </section>
+        </main>
+      </article>
+    </main>
+    <script src="/js/panel.js"></script>
+    <script src="/js/addNewWorkerFormHandler.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

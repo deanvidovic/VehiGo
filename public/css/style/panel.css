@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  background-color: #111010;
+}
+
+.admin--panel {
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+  grid-template-rows: 1fr;
+}
+
+.side--navigation {
+  height: 100vh;
+  background-color: #000;
+  /* padding-left: 3rem; */
+  display: flex;
+  justify-content: center;
+}
+
+.side--navigation--content {
+  padding-top: 4.4rem;
+}
+
+.logo--photo {
+  width: 25.8rem;
+  height: auto;
+  margin-bottom: 1.8rem;
+}
+
+.field--heading {
+  padding-left: 1.8rem;
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+}
+
+.side--navigation--items {
+  padding-left: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.side--navigation--items .navigation--item {
+  padding: 1.4rem 0.7rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1.2rem;
+  min-width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.side--navigation--items .navigation--item:hover,
+.side--navigation--items .navigation--item:visited,
+.side--navigation--items .navigation--item:active {
+  background-color: #1c7ed6;
+}
+
+.side--navigation--items .navigation--item.active--item {
+  background-color: #1c7ed6;
+}
+
+.side--navigation--items .navigation--item .side--navigation--icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #fff;
+}
+
+.side--navigation--items .navigation--item .side--navigation--heading {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.side--navigation .profile--btn {
+  margin-top: 25rem;
+  min-width: 100%;
+  padding: 1.4rem 0.7rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: left;
+  background-color: #1c7ed6;
+  border: none;
+  border-radius: 5px;
+}
+
+.side--navigation .profile--btn .profile--photo {
+  width: 3.7rem;
+  height: 3.7rem;
+}
+
+.side--navigation .profile--btn .profile--name {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.content--admin {
+  height: 100vh;
+}
+
+.content--admin .admin--sections {
+  padding-top: 6.4rem;
+  padding-left: 9.8rem;
+}
+
+.content--admin .admin--sections .section--heading {
+  font-size: 4.4rem;
+  color: #fff;
+  margin-bottom: 4.4rem;
+}
+
+.content--admin .admin--sections .form--admin--cars {
+  max-width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  row-gap: 1.8rem;
+  column-gap: 1.8rem;
+}
+
+.form--input--admin {
+  border: none;
+  border-radius: 5px;
+  padding-left: 1.2rem;
+  font-size: 1.8rem;
+}
+
+.form--input--admin::placeholder {
+  font-size: 1.8rem;
+  color: #428fd2;
+  font-weight: 300;
+}
+
+.form--submit--admin {
+  grid-column: 1/-1;
+  background-color: #1c7ed6;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1.4rem 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form--url--input {
+  grid-row: 6/8;
+  grid-column: 2/3;
+}
+
+.admin--section {
+  display: block;
+}
+
+.admin--section.active--section {
+  display: block;
+}
+  
+/* DEAAAN JE BIOOO OVDJE */
+a {
+  text-decoration: none;
+}
+/* DEAAAN JE BIOOO OVDJE */

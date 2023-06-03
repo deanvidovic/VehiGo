@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/css/style/panel.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>VehiGo | Administracija</title>
+  </head>
+  <body>
+    <main class="admin--panel">
+        <%- include('../aside/aside.ejs') %>
+      <article class="content--admin">
+        <main class="admin--sections">
+          <section class="admin--section active--section section--automobili">
+            <h1 class="section--heading">Unesite novi automobil</h1>
+            <form class="form--admin--cars">
+              <input
+                type="text"
+                placeholder="Registracija"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Brand auta"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Model auta"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Tip auta"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Prijeđeni kilometri"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Maksimalna brzina"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Potrošnja (100 km/l)"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Broj sjedala"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Tip benzina"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Broj konja"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Godina"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Cijena (dan/€)"
+                class="form--input--admin"
+              />
+              <input
+                type="text"
+                placeholder="Url za sliku"
+                class="form--input--admin form--url--input"
+              />
+              <input
+                type="submit"
+                value="Potvrdi unos"
+                class="form--submit--admin"
+              />
+            </form>
+          </section>
+        </main>
+      </article>
+    </main>
+    <script src="/panel.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

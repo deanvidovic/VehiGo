@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
 const carRoutes = require("./routes/carRoutes");
 const aboutRoutes = require("./routes/aboutRoutes");
+const workerRoutes = require("./routes/workerRoutes");
 // middlewares
 const cookieParser = require("cookie-parser");
 const { checkUser } = require("./middleware/authMiddleware");
@@ -41,5 +42,6 @@ app.get("/", checkUser, (req, res) => {
 });
 
 app.use(authRoutes);
+app.use(workerRoutes);
 app.use(carRoutes);
 app.use(aboutRoutes);
