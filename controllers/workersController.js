@@ -1,4 +1,6 @@
 const { response } = require('express');
+const mongoose = require('mongoose');
+const { upload } = require("../middleware/uploadImage");
 //const Admin = require('../models/Admin');
 const jwt = require('jsonwebtoken');
 
@@ -33,17 +35,19 @@ module.exports.get_reservations = async (req, res) => {
     try {
       const collectionCars = mongoose.connection.collection('cars'); 
       const collectionReservation = mongoose.connection.collection('reservations'); 
+      const collectionCustomers = mongoose.connection.collection('customers'); 
       const cars = await collectionCars.find().toArray();
       const reservations = await collectionReservation.find().toArray();
-      // console.log(reservations[0].reservation_car_url);
-      res.render('../views/sites/reservations', { reservations, cars });
+      const customers = await collectionCustomers.find().toArray();
+
+      res.render('../views/panel/partials/reservations', { reservations, cars, customers });
       
     } catch (err) {
-      console.log("Greska pri dohvacanju", err)
+      console.log("Error occurred while fetching data", err);
+      res.status(500).send("An error occurred");
     }
-
-    res.render('../views/panel/partials/reservations');
 }
+
 
 module.exports.get_workers = (req, res) => {
     res.render('../views/panel/partials/workers');

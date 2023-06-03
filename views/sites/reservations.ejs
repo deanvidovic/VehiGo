@@ -48,8 +48,9 @@
                   auto = car;
                 }
               });
-              
             })  
+
+            let isEmpty = false;
 
             function getDateFromIsoDate(isoDate) {
               const date = new Date(isoDate);
@@ -63,31 +64,33 @@
             }
           %>
           
-          <% if (reservations.length > 0) { %>
           
-            <% reservations.forEach(reservation => { %>
-              <div class="reservation--card">
-                <img
-                  src="<%= reservation.reservation_car_url %>"
-                  alt="This is photo of reserved car"
-                />
-                <div class="reservation--card--content">
-                  <h1 class="reservation--card--heading"><%= auto.car_brand %></h1>
-                  <p class="reservation--card--price"><%= auto.car_price %> €/dan</p>
-                  <p class="reservation--card--message">
-                    Rezervirali ste od: <%= getDateFromIsoDate(reservation.reservation_start) %> do <%= getDateFromIsoDate(reservation.reservation_end) %>
-                  </p>
+            <% reservations.forEach(reservation => { 
+              if (reservation.reservation_user_id == customer._id) {  isEmpty = true; %>
+                <div class="reservation--card">
+                  <img
+                    src="<%= reservation.reservation_car_url %>"
+                    alt="This is photo of reserved car"
+                  />
+                  <div class="reservation--card--content">
+                    <h1 class="reservation--card--heading"><%= auto.car_brand %></h1>
+                    <p class="reservation--card--price"><%= auto.car_price %> €/dan</p>
+                    <p class="reservation--card--message">
+                      Rezervirali ste od: <%= getDateFromIsoDate(reservation.reservation_start) %> do <%= getDateFromIsoDate(reservation.reservation_end) %>
+                    </p>
+                  </div>
+                  <ion-icon
+                    name="trash-outline"
+                    class="reservation--card--delete"
+                    data-doc="<%= reservation._id %>"
+                  ></ion-icon>
                 </div>
-                <ion-icon
-                  name="trash-outline"
-                  class="reservation--card--delete"
-                  data-doc="<%= reservation._id %>"
-                ></ion-icon>
-              </div>
+              <% } %>
             <% }) %>
+
+          <% if (isEmpty) { %>
           <% } else { %>
             <h1>nea niceg u rezervacijama</h1>
-            
           <% } %>
 
         </main>

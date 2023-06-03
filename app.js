@@ -13,6 +13,7 @@ const workerRoutes = require("./routes/workerRoutes");
 const cookieParser = require("cookie-parser");
 const { checkUser } = require("./middleware/authMiddleware");
 const { isAdmin } = require('./middleware/workerMiddleware');
+const multer = require("multer");
 
 // ============================================================================
 

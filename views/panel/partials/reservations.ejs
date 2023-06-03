@@ -22,6 +22,44 @@
           <section class="admin--section section--rezervacije">
             <h1 class="section--heading">Prikaz svih rezervacija</h1>
           </section>
+
+
+          <%
+
+            function getDateFromIsoDate(isoDate) {
+              const date = new Date(isoDate);
+
+              const day = date.getDate();
+              const month = date.getMonth() + 1; 
+              const year = date.getFullYear();
+
+              const formattedDate = `${day}.${month}.${year}`;
+              return formattedDate;
+            }
+
+          let arrOfCustomers = [];
+          reservations.forEach(reservation => {
+            customers.forEach(customer => {
+              if (customer._id == reservation.reservation_user_id) {
+                cars.forEach(car => {
+                  if(car._id == reservation.reservation_car_id) {%>
+                    <h1><%= customer.customer_first_name %> 
+                      <%= customer.customer_last_name %> | 
+                      <%= customer.customer_email %> | 
+                      <%= car.car_brand %> | 
+                      <%= car.car_model %> | 
+                      <%= getDateFromIsoDate(reservation.reservation_start) %> | 
+                      <%= getDateFromIsoDate(reservation.reservation_end) %> | 
+                      <%= car.car_url %>
+                      
+                      </h1>
+                    <%}
+                });
+              }
+            })
+          });
+          %>
+
         </main>
       </article>
     </main>
