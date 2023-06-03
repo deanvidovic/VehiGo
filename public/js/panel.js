@@ -1,16 +1,48 @@
 "use script";
 /**************ADMIN PANEL*************/
-const adminNavList = document.querySelectorAll("button.navigation--item");
+const adminNavList = document.querySelectorAll(".navigation--item");
 const navAdminListArr = Array.from(adminNavList);
-console.log(typeof adminNavList);
-console.log(adminNavList);
-console.log(typeof navAdminListArr);
-console.log(navAdminListArr);
 
-const navAdminIndex = navAdminListArr.findIndex((e) =>
-  e.classList.contains("active--admin")
+const navAdminIndex = navAdminListArr.find((e) =>
+  e.classList.contains("active--item")
 );
 console.log(navAdminIndex);
+console.log(navAdminListArr);
+navAdminListArr.forEach((e) => {
+  e.addEventListener((el) => {
+    const clicked = el.target;
+    console.log(el);
+    // e.addEventListener("click", () => {
+    //   navAdminListArr.forEach((el) => {
+    //     el.classList.remove("active--item");
+    //   });
+    //   e.classList.add("active--item");
+    // });
+  });
+});
+
+/*
+// Get the parent container of the navigation buttons
+const navContainer = document.querySelector('.navigation-container');
+
+// Add a click event listener to the parent container
+navContainer.addEventListener('click', function(event) {
+  // Check if the clicked element is a button
+  if (event.target.tagName === 'BUTTON') {
+    const clickedBtn = event.target;
+    
+    // Remove the "active--main" class from all buttons
+    const buttons = navContainer.querySelectorAll('button.navigation--item');
+    buttons.forEach(button => {
+      button.classList.remove('active--main');
+    });
+
+    // Add the "active--main" class to the clicked button
+    clickedBtn.classList.add('active--main');
+  }
+});
+
+*/
 
 function allowOnlyNumbers(event) {
   var keyCode = event.which ? event.which : event.keyCode;
