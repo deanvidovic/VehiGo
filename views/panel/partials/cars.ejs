@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="/css/style/panel.css" />
+    <link rel="stylesheet" href="/css/style/general.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +16,7 @@
   </head>
   <body>
     <main class="admin--panel">
-        <%- include('../aside/aside.ejs') %>
+      <%- include('../aside/aside.ejs') %>
       <article class="content--admin">
         <main class="admin--sections">
           <section class="admin--section active--section section--automobili">
@@ -23,6 +24,7 @@
             <form class="form--admin--cars">
               <input
                 type="text"
+                onkeypress="allowOnlyNumbersAndBigLetters(event)"
                 placeholder="Registracija"
                 class="form--input--admin"
               />
@@ -36,49 +38,69 @@
                 placeholder="Model auta"
                 class="form--input--admin"
               />
-              <input
+              <!-- <select
                 type="text"
                 placeholder="Tip auta"
                 class="form--input--admin"
-              />
+              /> -->
+              <select class="form--input--admin">
+                <option value="Tip auta">Tip auta</option>
+                <option value="Kupe">Kupe</option>
+                <option value="Kabriolet">Kabriolet</option>
+                <option value="Kombi">Kombi</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Limuzina">Limuzina</option>
+                <option value="Karavan">Karavan</option>
+                <option value="Hatchback">Hatchback</option>
+              </select>
               <input
                 type="text"
+                onkeypress="allowOnlyNumbers(event)"
                 placeholder="Prijeđeni kilometri"
                 class="form--input--admin"
               />
               <input
                 type="text"
+                onkeypress="allowOnlyNumbers(event)"
                 placeholder="Maksimalna brzina"
                 class="form--input--admin"
               />
               <input
                 type="text"
                 placeholder="Potrošnja (100 km/l)"
+                onkeypress="allowOnlyNumbers(event)"
                 class="form--input--admin"
               />
-              <input
-                type="text"
-                placeholder="Broj sjedala"
-                class="form--input--admin"
-              />
-              <input
-                type="text"
-                placeholder="Tip benzina"
-                class="form--input--admin"
-              />
+              <select class="form--input--admin">
+                <option value="Broj sjedala">Broj sjedala</option>
+                <option value="2">2</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+              <select class="form--input--admin">
+                <option value="Tip benzina">Tip benzina</option>
+                <option value="Benzin">Benzin</option>
+                <option value="Dizel">Dizel</option>
+                <option value="Hibrid">Hibrid</option>
+                <option value="Plin">Plin</option>
+              </select>
               <input
                 type="text"
                 placeholder="Broj konja"
+                onkeypress="allowOnlyNumbers(event)"
                 class="form--input--admin"
               />
               <input
                 type="text"
                 placeholder="Godina"
+                onkeypress="allowOnlyNumbers(event)"
                 class="form--input--admin"
               />
               <input
                 type="text"
                 placeholder="Cijena (dan/€)"
+                onkeypress="allowOnlyNumbers(event)"
                 class="form--input--admin"
               />
               <input
@@ -96,7 +118,7 @@
         </main>
       </article>
     </main>
-    <script src="/panel.js"></script>
+    <script src="/js/panel.js"></script>
 
     <script
       type="module"

@@ -11,7 +11,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
-  background-color: #111010;
+  background-color: var(--smooth-dark);
 }
 
 .admin--panel {
@@ -22,7 +22,7 @@ body {
 
 .side--navigation {
   height: 100vh;
-  background-color: #000;
+  background-color: var(--full-dark);
   /* padding-left: 3rem; */
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ body {
 .field--heading {
   padding-left: 1.8rem;
   font-size: 2.4rem;
-  color: #fff;
+  color: var(--white-color);
   font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
@@ -72,22 +72,22 @@ body {
 .side--navigation--items .navigation--item:hover,
 .side--navigation--items .navigation--item:visited,
 .side--navigation--items .navigation--item:active {
-  background-color: #1c7ed6;
+  background-color: var(--color-primary);
 }
 
 .side--navigation--items .navigation--item.active--item {
-  background-color: #1c7ed6;
+  background-color: var(--color-primary);
 }
 
 .side--navigation--items .navigation--item .side--navigation--icon {
   width: 2.4rem;
   height: 2.4rem;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .side--navigation--items .navigation--item .side--navigation--heading {
   font-size: 2.4rem;
-  color: #fff;
+  color: var(--white-color);
   font-weight: 400;
 }
 
@@ -99,7 +99,7 @@ body {
   gap: 1.2rem;
   align-items: center;
   justify-content: left;
-  background-color: #1c7ed6;
+  background-color: var(--color-primary);
   border: none;
   border-radius: 5px;
 }
@@ -111,11 +111,12 @@ body {
 
 .side--navigation .profile--btn .profile--name {
   font-size: 2.4rem;
-  color: #fff;
+  color: var(--white-color);
   font-weight: 300;
 }
 
 .content--admin {
+  background-color: var(--full-dark);
   height: 100vh;
 }
 
@@ -126,7 +127,7 @@ body {
 
 .content--admin .admin--sections .section--heading {
   font-size: 4.4rem;
-  color: #fff;
+  color: var(--white-color);
   margin-bottom: 4.4rem;
 }
 
@@ -148,14 +149,14 @@ body {
 
 .form--input--admin::placeholder {
   font-size: 1.8rem;
-  color: #428fd2;
+  color: var(--full-dark);
   font-weight: 300;
 }
 
 .form--submit--admin {
   grid-column: 1/-1;
-  background-color: #1c7ed6;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--white-color);
   font-size: 1.8rem;
   padding: 1.4rem 0;
   border: none;
@@ -175,7 +176,7 @@ body {
 .admin--section.active--section {
   display: block;
 }
-  
+
 /* DEAAAN JE BIOOO OVDJE */
 a {
   text-decoration: none;
