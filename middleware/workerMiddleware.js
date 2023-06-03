@@ -24,14 +24,15 @@ const isAdmin = (req, res, next) => {
     if (token) {
         jwt.verify(token, 'e alo bidibao radnik', (err, decoded_token) => {
             if (err) {
-                return
+                next();
             } else {
                 res.redirect('/panel');
                 next();
             }
         })
     } else {
-        return
+        next();
+        
     }
 }
 

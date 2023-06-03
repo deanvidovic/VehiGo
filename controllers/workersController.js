@@ -29,7 +29,19 @@ module.exports.get_cars = (req, res) => {
     res.render('../views/panel/partials/cars');
 }
 
-module.exports.get_reservations = (req, res) => {
+module.exports.get_reservations = async (req, res) => {
+    try {
+      const collectionCars = mongoose.connection.collection('cars'); 
+      const collectionReservation = mongoose.connection.collection('reservations'); 
+      const cars = await collectionCars.find().toArray();
+      const reservations = await collectionReservation.find().toArray();
+      // console.log(reservations[0].reservation_car_url);
+      res.render('../views/sites/reservations', { reservations, cars });
+      
+    } catch (err) {
+      console.log("Greska pri dohvacanju", err)
+    }
+
     res.render('../views/panel/partials/reservations');
 }
 
