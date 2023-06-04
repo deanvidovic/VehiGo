@@ -8,7 +8,6 @@ const navAdminIndex = navAdminListArr.find((e) =>
 );
 navAdminListArr.forEach((e) => {
   e.addEventListener("click", (btn) => {
-    btn.preventDefault();
     navAdminListArr.forEach((but) => {
       but.classList.remove("active--item");
     });

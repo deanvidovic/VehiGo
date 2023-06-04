@@ -182,3 +182,21 @@ a {
   text-decoration: none;
 }
 /* DEAAAN JE BIOOO OVDJE */
+
+/* TABLE Reservation */
+.table--reservation--admin {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.8rem;
+  border:0.1rem solid var(--white-color);
+}
+
+.table--reservation--admin td,th {
+  text-align: center;
+  padding: 1.8rem;
+  border: 0.1rem solid var(--white-color);
+}
+
+.table--reservation--admin tr:nth-child(even) {
+  background-color: var(--smooth-dark);
+}
