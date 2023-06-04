@@ -80,9 +80,8 @@ module.exports.reserve = async (req, res) => {
     const overlappingReservation = await Reservation.findOne({
       reservation_car_id,
       reservation_car_url,
-      reservation_start: { $lte: reservation_end },
-      reservation_end: { $gte: reservation_start },
-      reservation_user_id
+      reservation_start: { $lt: reservation_end },
+      reservation_end: { $gte: reservation_start }
     });
 
     if (overlappingReservation) {
