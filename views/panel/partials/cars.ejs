@@ -21,20 +21,23 @@
         <main class="admin--sections">
           <section class="admin--section active--section section--automobili">
             <h1 class="section--heading">Unesite novi automobil</h1>
-            <form class="form--admin--cars">
+            <form class="form--admin--cars" id="addCarsForm" action="/panel">
               <input
                 type="text"
+                name="car_license_number"
                 onkeypress="allowOnlyNumbersAndBigLetters(event)"
                 placeholder="Registracija"
                 class="form--input--admin"
               />
               <input
                 type="text"
+                name="car_brand"
                 placeholder="Brand auta"
                 class="form--input--admin"
               />
               <input
                 type="text"
+                name="car_model"
                 placeholder="Model auta"
                 class="form--input--admin"
               />
@@ -43,7 +46,7 @@
                 placeholder="Tip auta"
                 class="form--input--admin"
               /> -->
-              <select class="form--input--admin">
+              <select class="form--input--admin" id="car_type">
                 <option value="Tip auta">Tip auta</option>
                 <option value="Kupe">Kupe</option>
                 <option value="Kabriolet">Kabriolet</option>
@@ -56,29 +59,32 @@
               <input
                 type="text"
                 onkeypress="allowOnlyNumbers(event)"
+                name="car_kilometers"
                 placeholder="Prijeđeni kilometri"
                 class="form--input--admin"
               />
               <input
                 type="text"
                 onkeypress="allowOnlyNumbers(event)"
+                name="car_max_speed"
                 placeholder="Maksimalna brzina"
                 class="form--input--admin"
               />
               <input
                 type="text"
                 placeholder="Potrošnja (100 km/l)"
+                name="car_fuel_consumption"
                 onkeypress="allowOnlyNumbers(event)"
                 class="form--input--admin"
               />
-              <select class="form--input--admin">
+              <select class="form--input--admin" id="car_seats">
                 <option value="Broj sjedala">Broj sjedala</option>
                 <option value="2">2</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
                 <option value="7">7</option>
               </select>
-              <select class="form--input--admin">
+              <select class="form--input--admin" id="car_fuel_type">
                 <option value="Tip benzina">Tip benzina</option>
                 <option value="Benzin">Benzin</option>
                 <option value="Dizel">Dizel</option>
@@ -88,37 +94,47 @@
               <input
                 type="text"
                 placeholder="Broj konja"
+                name="car_horse_power"
                 onkeypress="allowOnlyNumbers(event)"
                 class="form--input--admin"
               />
               <input
                 type="text"
                 placeholder="Godina"
+                name="car_year"
                 onkeypress="allowOnlyNumbers(event)"
                 class="form--input--admin"
               />
               <input
                 type="text"
+                name="car_price"
                 placeholder="Cijena (dan/€)"
                 onkeypress="allowOnlyNumbers(event)"
                 class="form--input--admin"
               />
               <input
                 type="text"
+                name="car_url"
                 placeholder="Url za sliku"
                 class="form--input--admin form--url--input"
               />
-              <input
-                type="submit"
-                value="Potvrdi unos"
-                class="form--submit--admin"
-              />
+              
+              <button class="form--submit--admin">Potvrdi unos</button>
             </form>
+
+            <br><br><br><br>
+
+            <form class="form--admin--cars" action="/upload" method="POST" enctype="multipart/form-data">
+              <input type="file" name="image"/>
+              <input type="submit">
+            </form>
+            <div class="car--error"></div>
           </section>
         </main>
       </article>
     </main>
     <script src="/js/panel.js"></script>
+    <script src="/js/addCarsFormHandler.js"></script>
 
     <script
       type="module"

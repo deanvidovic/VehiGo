@@ -1,18 +1,22 @@
 const { response } = require('express');
 const mongoose = require('mongoose');
-const { upload } = require("../middleware/uploadImage");
+
+const Car = require('../models/Car');
 //const Admin = require('../models/Admin');
 const jwt = require('jsonwebtoken');
 
 const handleErrors = (err) => {
     //console.log(err.message, err.code);
     let errors = {
-        worker_username: '',
         worker_password: ''
     };
 
     if(err.message === 'Vasa lozinka ili korisnicko ime nije tocno!') {
         errors.worker_password = 'Vasa lozinka ili korisnicko ime nije tocno!';
+    }
+
+    if (err.message === "nekaj nie dobro") {
+        errors.worker_password = "Nesto niste dobro unijeli.";
     }
 
     return errors;
@@ -30,6 +34,47 @@ module.exports.admin_get = (req, res) => {
 module.exports.get_cars = (req, res) => {
     res.render('../views/panel/partials/cars');
 }
+
+module.exports.post_cars = async (req, res) => {
+    const {
+        car_license_number,
+        car_brand,
+        car_model,
+        car_type,
+        car_kilometers,
+        car_max_speed,
+        car_fuel_consumption,
+        car_seats,
+        car_fuel_type,
+        car_horse_power,
+        car_year,
+        car_price,
+        car_url
+    } = req.body;
+    try {
+        const car = await Car.create({
+            car_license_number,
+            car_brand,
+            car_model,
+            car_type,
+            car_kilometers,
+            car_max_speed,
+            car_fuel_consumption,
+            car_seats,
+            car_fuel_type,
+            car_horse_power,
+            car_year,
+            car_price,
+            car_url
+        });
+    
+        res.status(201).json({ car });
+    }catch (err) {
+        const errors = handleErrors(err) 
+        res.status(400).json({ errors })
+    }
+}
+      
 
 module.exports.get_reservations = async (req, res) => {
     try {
