@@ -25,6 +25,9 @@
 /* BELOW 944px 59em */
 
 @media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
   .features--boxes {
     grid-template-columns: 1fr;
     justify-content: center;
@@ -33,6 +36,7 @@
 
   .features--box {
     max-width: 70%;
+    justify-self: center;
   }
 
   .features--icon {

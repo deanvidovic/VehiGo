@@ -62,3 +62,11 @@
 .reservation--card--message {
   font-size: 1.8rem;
 }
+
+.reservation--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:3.2rem;
+}
