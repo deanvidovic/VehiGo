@@ -118,15 +118,25 @@
                 placeholder="Url za sliku"
                 class="form--input--admin form--url--input"
               />
-              
+
               <button class="form--submit--admin">Potvrdi unos</button>
             </form>
 
-            <br><br><br><br>
-
-            <form class="form--admin--cars" action="/upload" method="POST" enctype="multipart/form-data">
-              <input type="file" name="image"/>
-              <input type="submit">
+            <form
+              class="form--admin--upload--image"
+              action="/upload"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <label class="upload--image">
+                <p class="upload--text">Prenesite željenu sliku</p>
+                <ion-icon
+                  name="cloud-upload-outline"
+                  class="upload--icon"
+                ></ion-icon>
+                <input type="file" name="image" class="input--image" />
+              </label>
+              <input type="submit" class="submit--image" />
             </form>
             <div class="car--error"></div>
           </section>

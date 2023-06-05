@@ -118,6 +118,17 @@ body {
 .content--admin {
   background-color: var(--full-dark);
   height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 4.4rem;
+}
+
+.content--admin::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+.content--admin::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 5rem;
 }
 
 .content--admin .admin--sections {
@@ -177,21 +188,16 @@ body {
   display: block;
 }
 
-/* DEAAAN JE BIOOO OVDJE */
-a {
-  text-decoration: none;
-}
-/* DEAAAN JE BIOOO OVDJE */
-
 /* TABLE Reservation */
 .table--reservation--admin {
   border-collapse: collapse;
   width: 100%;
   font-size: 1.8rem;
-  border:0.1rem solid var(--white-color);
+  border: 0.1rem solid var(--white-color);
 }
 
-.table--reservation--admin td,th {
+.table--reservation--admin td,
+th {
   text-align: center;
   padding: 1.8rem;
   border: 0.1rem solid var(--white-color);
@@ -199,4 +205,53 @@ a {
 
 .table--reservation--admin tr:nth-child(even) {
   background-color: var(--smooth-dark);
+}
+
+.form--admin--upload--image {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-top: 2rem;
+  max-width: 70%;
+}
+
+.upload--image {
+  min-width: 100%;
+  padding: 9.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.8rem;
+  border: 0.2rem dotted var(--white-color);
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.input--image {
+  display: none;
+}
+
+.upload--text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+}
+
+.upload--icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.submit--image {
+  min-width: 100%;
+  padding: 0.7rem 0.35rem;
+  font-size: 1.8rem;
+  background-color: var(--white-color);
+  color: var(--full-dark);
+  border: none;
+  border-radius: 7px;
 }

@@ -24,9 +24,12 @@ let brandArr = currentBrand + "Models";
 //Privremeno dok nema baze
 //!!!!Slike spremamo [imeMarke][imeModela].png
 const carsArr = {
-  mercedesModels: ["Aklasa", { seats: 5, ks: 120, fuel: "benzin" }],
-  volkswagenModels: ["Arteon", { seats: 5, ks: 140, fuel: "dizel" }],
-  bmwModels: ["X6M", { seats: 5, ks: 160, fuel: "benzin/hybrid" }],
+  mercedesModels: ["Aklasa", { seats: 5, ks: 120, fuel: "benzin", price: 150 }],
+  volkswagenModels: [
+    "Arteon",
+    { seats: 5, ks: 140, fuel: "dizel", price: 100 },
+  ],
+  bmwModels: ["X6M", { seats: 5, ks: 160, fuel: "benzin/hybrid", price: 200 }],
 };
 
 //Function which is changing active logos in navigation of logos
@@ -80,19 +83,10 @@ const displayCarSpec = (brand) => {
     `;
 };
 displayCarSpec(currentBrand);
-/*
-const carsArr = {
-  mercedesModels: ["Aklasa", { maxSpeed: 180, kw: 120, seats: 5 }],
-  volkswagenModels: ["Arteon", { maxSpeed: 200, kw: 140, seats: 5 }],
-  bmwModels: ["X6M", { maxSpeed: 220, kw: 160, seats: 5 }],
-};*/
 
 //Function which is calling all functions to get whole UI of header
 const displayUI = (side) => {
-  //Display nav of models
   displayNavModels(side);
-
-  //Display center car img
   displayCarImg(currentBrand);
   displayCarSpec(currentBrand);
 };

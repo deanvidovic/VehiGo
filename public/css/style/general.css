@@ -63,7 +63,6 @@
   padding: 0;
   box-sizing: border-box;
   line-height: 1;
-  transition: 0.4s all ease;
 }
 
 html {
@@ -126,6 +125,10 @@ button {
   margin: 0 auto;
 }
 
+.whitespace {
+  padding-bottom: 9.8rem;
+}
+
 .d-flex-center {
   display: flex;
   align-items: center;
@@ -168,10 +171,6 @@ button {
   margin-bottom: 1.6rem;
 }
 
-.whitespace {
-  padding-bottom: 9.8rem;
-}
-
 .grid {
   display: grid;
 }
@@ -179,7 +178,6 @@ button {
 .grid--twoRows--twoColumns {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-
 }
 
 .hr {
