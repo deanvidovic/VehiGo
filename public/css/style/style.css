@@ -13,7 +13,7 @@
   justify-content: space-between;
   max-width: 170rem;
   margin: 0 auto;
-  padding: 3.6rem 3.2rem 0 3.2rem ;
+  padding: 3.6rem 3.2rem 0 3.2rem;
 }
 
 .search-bar {
@@ -97,8 +97,8 @@
 }
 
 .hamburger--line {
-  height: 0.2rem;
-  width: 3rem;
+  height: 0.3rem;
+  width: 4rem;
   background-color: var(--white-color);
 }
 
@@ -298,12 +298,12 @@
   justify-content: center;
 }
 
-/* .services-content{
+.services-content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-} */
+}
 
 .services-heading {
   font-size: 3.2rem;
