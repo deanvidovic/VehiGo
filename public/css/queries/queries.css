@@ -12,6 +12,32 @@
     grid-template-rows: 0.2fr 0.5fr 0.1fr 0.2fr;
   }
 
+  .heading-desc {
+    font-size: 2rem;
+  }
+
+  .heading-desc .strong {
+    font-size: 6.4rem;
+  }
+
+  .note-description {
+    font-size: 2rem;
+  }
+
+  .spec--icon {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .spec--desc {
+    font-size: 3.6rem;
+  }
+
+  .bookBtn {
+    font-size: 2rem;
+    padding: 1.8rem 3.6rem;
+  }
+
   .models {
     grid-row: 4/5;
     grid-column: 1/2;
@@ -68,9 +94,10 @@
     min-width: 30rem;
     z-index: 9999;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     transition: 0.4s all ease;
+    padding-top: 12.8rem;
   }
 
   .active--hamburger {
@@ -150,8 +177,80 @@
   .footer--aside {
     margin-top: 1.8rem;
   }
+
+  .features--box {
+    min-width: 100%;
+  }
+
+  .secondary-heading {
+    font-size: 3.6rem;
+  }
 }
 
 /* BELOW 512px 32em*/
 @media (max-width: 32em) {
+  .features--box {
+    min-width: 100%;
+  }
+
+  .secondary-heading {
+    font-size: 3rem;
+  }
+
+  .car-image {
+    padding: 1.8rem;
+  }
+
+  .img--car {
+    width: auto;
+    height: 20rem;
+    padding: 0;
+  }
+
+  .text--content {
+    font-size: 1.8rem;
+    padding: 0;
+  }
+
+  .first--img--services {
+    margin-bottom: 3.2rem;
+  }
+
+  .services {
+    row-gap: 3.2rem;
+  }
+
+  .services-content {
+    align-items: start;
+  }
+
+  .services-heading {
+    text-align: left;
+  }
+
+  .features--heading {
+    text-align: left;
+    font-size: 2.4rem;
+  }
+
+  .features--description {
+    font-size: 1.6rem;
+  }
+
+  .features--icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .footer--nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+  }
+
+  .arrow-icon {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
 }

@@ -194,6 +194,7 @@ button {
 .footer--nav {
   display: flex;
   justify-content: space-between;
+  gap: 1.2rem;
 }
 
 .footer-list {

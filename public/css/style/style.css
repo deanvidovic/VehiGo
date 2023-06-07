@@ -199,7 +199,7 @@
 }
 
 .img--car {
-  padding: 6.4rem;
+  padding: 3.2rem;
 }
 
 .models-car:hover {
@@ -428,16 +428,19 @@
 
 .copyright {
   font-size: 1.6rem;
+  white-space: nowrap;
 }
 
 .footer--nav--link:link,
 .footer--nav--link:visited {
   font-size: 1.6rem;
+  white-space: nowrap;
 }
 
 .footer--nav--link:hover,
 .footer--nav--link:active {
   color: var(--color-primary);
+  white-space: nowrap;
 }
 
 .action--container--nav {
