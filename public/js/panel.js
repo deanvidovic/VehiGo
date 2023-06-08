@@ -3,6 +3,9 @@
 const adminNavList = document.querySelectorAll(".navigation--item");
 const navAdminListArr = Array.from(adminNavList);
 
+const profileContainer = document.querySelector(".profile--container");
+const logutAdmin = document.querySelector(".logout--admin");
+
 const navAdminIndex = navAdminListArr.find((e) =>
   e.classList.contains("active--item")
 );
@@ -59,3 +62,7 @@ function allowOnlyNumbersAndBigLetters(event) {
     event.preventDefault();
   }
 }
+
+profileContainer.addEventListener("click", function () {
+  logutAdmin.classList.toggle("logout");
+});

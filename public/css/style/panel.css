@@ -115,6 +115,33 @@ body {
   font-weight: 300;
 }
 
+.profile--container {
+  position: relative;
+}
+
+.logout--admin {
+  position: absolute;
+  min-width: 100%;
+  background-color: var(--white-color);
+  color: var(--full-dark);
+  font-size: 1.8rem;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 9px 9px 0 0;
+  top: -0.2rem;
+  opacity: 0;
+  user-select: none;
+  visibility: hidden;
+  transition: 0.4s all ease;
+}
+
+.logout--admin.logout {
+  opacity: 1;
+  user-select: auto;
+  visibility: visible;
+  top: -2.7rem;
+}
+
 .content--admin {
   background-color: var(--full-dark);
   height: 100vh;
