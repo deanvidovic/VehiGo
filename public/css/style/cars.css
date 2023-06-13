@@ -26,6 +26,10 @@
 
 .filters {
   margin-bottom: 4.4rem;
+  /* max-width: 100%; */
+  overflow-x: auto;
+  scroll-padding-left: 0;
+  scroll-margin-left: 0;
 }
 
 .models--cars {
@@ -40,9 +44,15 @@
   background-color: transparent;
   color: var(--white-color);
   gap: 1rem;
+  min-width: 0;
 }
 
 .filter--btn:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
+
+.active--filter {
   border-color: var(--color-primary);
   background-color: var(--color-primary);
 }

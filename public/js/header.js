@@ -12,7 +12,6 @@
 
 const hamburgerMenu = document.querySelector(".hamburger--menu");
 const mainMenu = document.querySelector(".menu");
-console.log(hamburgerMenu, mainMenu);
 
 hamburgerMenu.addEventListener("click", function () {
   mainMenu.classList.toggle("active--hamburger");

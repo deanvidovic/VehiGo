@@ -13,7 +13,7 @@
   justify-content: space-between;
   max-width: 170rem;
   margin: 0 auto;
-  padding: 3.6rem 3.2rem 0 3.2rem;
+  padding: 2.4rem 3.2rem;
 }
 
 .search-bar {
@@ -99,6 +99,23 @@
 .hamburger--line {
   height: 0.3rem;
   width: 4rem;
+  background-color: var(--white-color);
+}
+
+.sticky--header {
+  background-color: var(--color-primary-dark);
+  position: fixed;
+  min-width: 100%;
+  z-index: 10000000000000000;
+  transition: all 0.4s ease;
+}
+
+.hero.sticky--header .menu-item:hover {
+  color: var(--white-color);
+}
+
+.hero.sticky--header .menu-item:hover::after {
+  width: 100%;
   background-color: var(--white-color);
 }
 
@@ -511,6 +528,16 @@
 
 .dropdown--items {
   white-space: nowrap;
+}
+
+/* ANIMATIONS */
+.section {
+  transition: 1s all ease;
+  transform: translateY(0);
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 /* 

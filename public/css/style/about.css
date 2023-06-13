@@ -1,3 +1,20 @@
+.section--header {
+  margin: 9.8rem 3.2rem;
+  border-radius: 11px;
+  background-image: linear-gradient(
+      to right,
+      var(--shadow-effect),
+      var(--shadow-effect)
+    ),
+    url("../../images/carsPage/carsBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .about--text {
   padding-top: 3.2rem;
   text-align: center;

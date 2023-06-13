@@ -35,67 +35,52 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <section class="container">
+      <section class="section container">
         <p class="subheading">&mdash; Vaše rezervacije</p>
         <h1 class="secondary-heading">Tu pronađite vaše aktivne rezervacije</h1>
         <main class="reservation--cards whitespace">
-
-          <% 
-            let auto = null;
-            reservations.forEach(reservation => {
-              cars.forEach(car => {
-                if (reservation.reservation_car_id == car._id) {
-                  auto = car;
-                }
-              });
-            })  
-
-            let isEmpty = false;
-
-            function getDateFromIsoDate(isoDate) {
-              const date = new Date(isoDate);
-
-              const day = date.getDate();
-              const month = date.getMonth() + 1; 
-              const year = date.getFullYear();
-
-              const formattedDate = `${day}.${month}.${year}`;
-              return formattedDate;
-            }
-          %>
-          
-          
-            <% reservations.forEach(reservation => { 
-              if (reservation.reservation_user_id == customer._id) {  isEmpty = true; %>
-                <div class="reservation--card">
-                  <img
-                    src="<%= reservation.reservation_car_url %>"
-                    alt="This is photo of reserved car"
-                  />
-                  <div class="reservation--card--content">
-                    <h1 class="reservation--card--heading"><%= auto.car_brand %></h1>
-                    <p class="reservation--card--price"><%= auto.car_price %> €/dan</p>
-                    <p class="reservation--card--message">
-                      Rezervirali ste od: <%= getDateFromIsoDate(reservation.reservation_start) %> do <%= getDateFromIsoDate(reservation.reservation_end) %>
-                    </p>
-                  </div>
-                  <ion-icon
-                    name="trash-outline"
-                    class="reservation--card--delete"
-                    data-doc="<%= reservation._id %>"
-                  ></ion-icon>
-                </div>
-              <% } %>
-            <% }) %>
-
-          <% if (isEmpty) { %>
-          <% } else { %>
-            <div class="reservation--empty">
-              <img src="/images/carsPage/emptyRes.png" alt="Er" class="emptyRes--img">
-              <h1 class="secondary-heading">Trenutno nema niti jedna rezervacija</h1>  
+          <% let auto = null; reservations.forEach(reservation => {
+          cars.forEach(car => { if (reservation.reservation_car_id == car._id) {
+          auto = car; } }); }) let isEmpty = false; function
+          getDateFromIsoDate(isoDate) { const date = new Date(isoDate); const
+          day = date.getDate(); const month = date.getMonth() + 1; const year =
+          date.getFullYear(); const formattedDate = `${day}.${month}.${year}`;
+          return formattedDate; } %> <% reservations.forEach(reservation => { if
+          (reservation.reservation_user_id == customer._id) { isEmpty = true; %>
+          <div class="reservation--card">
+            <img
+              src="<%= reservation.reservation_car_url %>"
+              alt="This is photo of reserved car"
+            />
+            <div class="reservation--card--content">
+              <h1 class="reservation--card--heading"><%= auto.car_brand %></h1>
+              <p class="reservation--card--price">
+                <%= auto.car_price %> €/dan
+              </p>
+              <p class="reservation--card--message">
+                Rezervirali ste od: <%=
+                getDateFromIsoDate(reservation.reservation_start) %> do <%=
+                getDateFromIsoDate(reservation.reservation_end) %>
+              </p>
             </div>
+            <ion-icon
+              name="trash-outline"
+              class="reservation--card--delete"
+              data-doc="<%= reservation._id %>"
+            ></ion-icon>
+          </div>
+          <% } %> <% }) %> <% if (isEmpty) { %> <% } else { %>
+          <div class="reservation--empty">
+            <img
+              src="/images/carsPage/emptyRes.png"
+              alt="Er"
+              class="emptyRes--img"
+            />
+            <h1 class="secondary-heading">
+              Trenutno nema niti jedna rezervacija
+            </h1>
+          </div>
           <% } %>
-
         </main>
       </section>
     </main>
@@ -103,6 +88,7 @@
 
     <script src="/js/reservationDelete.js"></script>
     <script src="/js/dropdown.js"></script>
+    <script src="/js/animations.js"></script>
 
     <!-- ICONS -->
     <script

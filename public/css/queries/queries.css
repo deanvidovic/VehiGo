@@ -149,7 +149,7 @@
   }
 
   .services-heading {
-    font-size: 4.4rem;
+    font-size: 2.4rem;
   }
 
   .text--content {
@@ -187,6 +187,15 @@
   }
 }
 
+/* BELOW 627px 39em*/
+@media (max-width: 39em) {
+  .secondary-heading.cars--heading {
+    font-size: 3rem;
+    padding: 0 1.8rem;
+    text-align: center;
+  }
+}
+
 /* BELOW 512px 32em*/
 @media (max-width: 32em) {
   .features--box {
@@ -208,7 +217,7 @@
   }
 
   .text--content {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: 0;
   }
 

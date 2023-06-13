@@ -33,78 +33,35 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <header class="cars--header">
-        <h1 class="secondary-heading">Istražite našu ponudu automobila</h1>
+      <header class="section cars--header">
+        <h1 class="secondary-heading cars--heading">
+          Istražite našu ponudu automobila
+        </h1>
       </header>
       <main class="cars--store">
         <div class="filters">
           <ul class="models--cars d-flex-center">
             <li class="model--car car1">
-              <button class="filter--btn d-flex-center">
-                <img
-                  src="../images/brand/bmw.png"
-                  class="logo--nav--cars"
-                  alt="Bmw"
-                />
-                <p class="filter--btn--text">Bmw</p>
+              <button class="filter--btn d-flex-center" data-model="all">
+                <p class="filter--btn--text">Sve</p>
+              </button>
+            </li>
+            <li class="model--car car1">
+              <button class="filter--btn d-flex-center" data-model="BMW">
+                <p class="filter--btn--text">BMW</p>
               </button>
             </li>
             <li class="model--car car2">
-              <button class="filter--btn d-flex-center">
-                <img
-                  src="./images/brand/mercedes.png"
-                  class="logo--nav--cars"
-                  alt="Mercedes logo"
-                />
+              <button class="filter--btn d-flex-center" data-model="Mercedes">
                 <p class="filter--btn--text">Mercedes</p>
-              </button>
-            </li>
-            <li class="model--car car3">
-              <button class="filter--btn d-flex-center">
-                <img
-                  src="./images/brand/porsche.png"
-                  class="logo--nav--cars"
-                  alt="Bmw logo"
-                />
-                <p class="filter--btn--text">Porsche</p>
-              </button>
-            </li>
-            <li class="model--car car4">
-              <button class="filter--btn d-flex-center">
-                <img
-                  src="./images/brand/vw.png"
-                  class="logo--nav--cars"
-                  alt="Volkswagen logo"
-                />
-                <p class="filter--btn--text">Volkswagen</p>
-              </button>
-            </li>
-            <li class="model--car car5">
-              <button class="filter--btn d-flex-center">
-                <img
-                  src="./images/brand/audi.png"
-                  class="logo--nav--cars"
-                  alt="Audi logo"
-                />
-                <p class="filter--btn--text">Audi</p>
-              </button>
-            </li>
-            <li class="model--car car6">
-              <button class="filter--btn d-flex-center">
-                <img
-                  src="./images/brand/lamborgini.png"
-                  class="logo--nav--cars"
-                  alt="Lamborgini logo"
-                />
-                <p class="filter--btn--text">Lamborgini</p>
               </button>
             </li>
           </ul>
         </div>
         <hr />
-        <div class="cars--grid">
+        <div class="section cars--grid">
           <% cars.forEach(car => { %>
-          <article class="card--car">
+          <article class="card--car" data-model="<%=car.car_brand%>">
             <a href="/cars/<%=car._id%>">
               <img
                 src="<%= car.car_url %>"
@@ -133,6 +90,7 @@
 
     <script src="/js/filter.js"></script>
     <script src="/js/dropdown.js"></script>
+    <script src="/js/animations.js"></script>
 
     <!-- ICONS -->
     <script

@@ -1,20 +1,22 @@
 "use script";
 /**************ADMIN PANEL*************/
-const adminNavList = document.querySelectorAll(".navigation--item");
+const adminNavList = document.querySelectorAll(".navigation--list");
+// console.log(adminNavList);
 const navAdminListArr = Array.from(adminNavList);
+const asideTabs = document.querySelectorAll(".navigation--item");
 
 const profileContainer = document.querySelector(".profile--container");
 const logutAdmin = document.querySelector(".logout--admin");
 
-const navAdminIndex = navAdminListArr.find((e) =>
-  e.classList.contains("active--item")
-);
 navAdminListArr.forEach((e) => {
   e.addEventListener("click", (btn) => {
-    navAdminListArr.forEach((but) => {
-      but.classList.remove("active--item");
+    const clicked = btn.target.closest(".navigation--item");
+    btn.preventDefault();
+    asideTabs.forEach((tab) => {
+      tab.classList.remove("active--item");
     });
-    btn.target.classList.add("active--item");
+    clicked.classList.add("active--item");
+    // window.location.href = "/panel";
   });
 });
 

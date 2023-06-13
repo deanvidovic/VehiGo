@@ -7,7 +7,6 @@ sendMailBtn.addEventListener("click", (e) => {
   const sender = document.querySelector(".email").value;
   const subject = document.querySelector(".subject").value;
   const message = document.querySelector(".message").value;
-  console.log(name, sender, subject, message);
   Email.send({
     Host: "smtp.gmail.com",
     Username: "vehigo137301@gmail.com",
