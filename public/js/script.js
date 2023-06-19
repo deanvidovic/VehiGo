@@ -24,7 +24,7 @@ let brandArr = currentBrand + "Models";
 //Privremeno dok nema baze
 //!!!!Slike spremamo [imeMarke][imeModela].png
 const carsArr = {
-  mercedesModels: ["Aklasa", { seats: 5, ks: 120, fuel: "benzin", price: 150 }],
+  mercedesModels: ["Aklasa", { seats: 5, ks: 120, fuel: "dizel", price: 60 }],
   volkswagenModels: [
     "Arteon",
     { seats: 5, ks: 140, fuel: "dizel", price: 100 },
