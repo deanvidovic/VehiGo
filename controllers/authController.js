@@ -55,7 +55,6 @@ module.exports.signin_get = (req, res) => {
 
 
 module.exports.signup_post = async (req, res) => {
-    // funkcija je asinkrona zbog toga sto treba await da ne bi bio promise u customeru
     const {
         customer_driver_license_number,
         customer_first_name,

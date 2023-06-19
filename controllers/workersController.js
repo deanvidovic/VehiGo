@@ -125,3 +125,8 @@ module.exports.admin_post = async (req, res) => {
     //Customer.login(customer_email, customer_password);
 }
 
+module.exports.logout_get = (req, res) => {
+    res.cookie('jwtw', '', { maxAge:1 });
+    res.redirect('/');
+}
+

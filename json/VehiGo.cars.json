@@ -1,0 +1,127 @@
+[{
+  "_id": {
+    "$oid": "647cb7933435e4ccb96bb979"
+  },
+  "car_license_number": "AB 1234 CD",
+  "car_brand": "Mercedes",
+  "car_model": "A-Class",
+  "car_type": "Hatchback",
+  "car_kilometers": 5000,
+  "car_max_speed": 220,
+  "car_fuel_consumption": 8.5,
+  "car_seats": 5,
+  "car_fuel_type": "dizel",
+  "car_horse_power": 120,
+  "car_year": 2012,
+  "car_price": 60,
+  "car_url": "/images/carsPage/AB 1234 CD.png"
+},
+{
+  "_id": {
+    "$oid": "647cb7933435e4ccb96bb97e"
+  },
+  "car_license_number": "UV 2345 WX",
+  "car_brand": "BMW",
+  "car_model": "3 Series",
+  "car_type": "Sedan",
+  "car_kilometers": 6000,
+  "car_max_speed": 230,
+  "car_fuel_consumption": 9.8,
+  "car_seats": 5,
+  "car_fuel_type": "dizel",
+  "car_horse_power": 120,
+  "car_year": 2012,
+  "car_price": 60,
+  "car_url": "/images/carsPage/UV 2345 WX.png"
+},
+{
+  "_id": {
+    "$oid": "647cb7933435e4ccb96bb97d"
+  },
+  "car_license_number": "QR 7890 ST",
+  "car_brand": "Mercedes",
+  "car_model": "GLC",
+  "car_type": "SUV",
+  "car_kilometers": 12000,
+  "car_max_speed": 240,
+  "car_fuel_consumption": 10.5,
+  "car_seats": 5,
+  "car_fuel_type": "dizel",
+  "car_horse_power": 120,
+  "car_year": 2012,
+  "car_price": 70,
+  "car_url": "/images/carsPage/QR 7890 ST.png"
+},
+{
+  "_id": {
+    "$oid": "647cb7933435e4ccb96bb97b"
+  },
+  "car_license_number": "IJ 9012 KL",
+  "car_brand": "Mercedes",
+  "car_model": "GLE",
+  "car_type": "SUV",
+  "car_kilometers": 8000,
+  "car_max_speed": 230,
+  "car_fuel_consumption": 11.8,
+  "car_seats": 5,
+  "car_fuel_type": "dizel",
+  "car_horse_power": 120,
+  "car_year": 2018,
+  "car_price": 80,
+  "car_url": "/images/carsPage/IJ 9012 KL.png"
+},
+{
+  "_id": {
+    "$oid": "647cb7933435e4ccb96bb97c"
+  },
+  "car_license_number": "MN 3456 OP",
+  "car_brand": "Mercedes",
+  "car_model": "E-Class",
+  "car_type": "Sedan",
+  "car_kilometers": 15000,
+  "car_max_speed": 250,
+  "car_fuel_consumption": 9.6,
+  "car_seats": 5,
+  "car_fuel_type": "dizel",
+  "car_horse_power": 120,
+  "car_year": 2019,
+  "car_price": 100,
+  "car_url": "/images/carsPage/MN 3456 OP.png"
+},
+{
+  "_id": {
+    "$oid": "647cb7933435e4ccb96bb97f"
+  },
+  "car_license_number": "YZ 6789 AB",
+  "car_brand": "BMW",
+  "car_model": "5 Series",
+  "car_type": "Sedan",
+  "car_kilometers": 9000,
+  "car_max_speed": 240,
+  "car_fuel_consumption": 11.2,
+  "car_seats": 5,
+  "car_fuel_type": "dizel",
+  "car_horse_power": 120,
+  "car_year": 2012,
+  "car_price": 60,
+  "car_url": "/images/carsPage/YZ 6789 AB.png",
+  "is_rented": true
+},
+{
+  "_id": {
+    "$oid": "647cb7933435e4ccb96bb97a"
+  },
+  "car_license_number": "EF 5678 GH",
+  "car_brand": "Mercedes",
+  "car_model": "C-Class",
+  "car_type": "Sedan",
+  "car_kilometers": 10000,
+  "car_max_speed": 240,
+  "car_fuel_consumption": 10.2,
+  "car_seats": 5,
+  "car_fuel_type": "dizel",
+  "car_horse_power": 120,
+  "car_year": 2014,
+  "car_price": 65,
+  "car_url": "/images/carsPage/EF 5678 GH.png"
+}]

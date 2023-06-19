@@ -10,7 +10,7 @@ router.get('/panel', requireAdminAuth, workerController.get_cars);
 router.post('/panel', requireAdminAuth, workerController.post_cars);
 router.post('/upload',requireAdminAuth,  upload.single('image'), (req, res) => { res.redirect("/panel") });
 router.get('/panel-reservations', requireAdminAuth, workerController.get_reservations) ;
-router.get('/panel-workers', requireAdminAuth, workerController.get_workers);
+router.get('/logoutadmin', workerController.logout_get)
 
 router.get('/admin', workerController.admin_get); 
 router.post('/admin', workerController.admin_post);
