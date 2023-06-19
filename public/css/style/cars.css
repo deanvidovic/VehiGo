@@ -27,9 +27,10 @@
 .filters {
   margin-bottom: 4.4rem;
   /* max-width: 100%; */
-  overflow-x: auto;
-  scroll-padding-left: 0;
-  scroll-margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .models--cars {
@@ -127,6 +128,7 @@
   border-radius: 9px;
   box-shadow: 0.2rem 0.2rem 0rem var(--color-primary);
   transition: all 0.4s ease;
+  margin: 0 1.8rem;
 }
 
 .card--car:hover {

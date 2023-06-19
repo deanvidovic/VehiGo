@@ -13,6 +13,8 @@ const modelsSpec = document.querySelector(".models-content");
 
 const mainHeader = document.querySelector(".main--header");
 
+const carPriceContent = document.querySelector(".strong");
+
 /**************HOME PAGE*************/
 
 //Header
@@ -27,9 +29,9 @@ const carsArr = {
   mercedesModels: ["Aklasa", { seats: 5, ks: 120, fuel: "dizel", price: 60 }],
   volkswagenModels: [
     "Arteon",
-    { seats: 5, ks: 140, fuel: "dizel", price: 100 },
+    { seats: 5, ks: 280, fuel: "dizel", price: 80 },
   ],
-  bmwModels: ["X6M", { seats: 5, ks: 160, fuel: "benzin/hybrid", price: 200 }],
+  bmwModels: ["X6M", { seats: 5, ks: 160, fuel: "benzin", price: 200 }],
 };
 
 //Function which is changing active logos in navigation of logos
@@ -64,9 +66,8 @@ const displayCarImg = (brand) => {
 
 displayCarImg(currentBrand);
 
-const displayCarSpec = (brand) => {
-  const currentModel = brand + "Models";
-  const spec = carsArr[currentModel][1];
+const displayCarSpec = () => {
+  const spec = carsArr[brandArr][1];
   modelsSpec.innerHTML = `
     <div class="spec--container d-flex-center">
       <ion-icon name="people-outline" class="spec--icon"></ion-icon>
@@ -82,13 +83,20 @@ const displayCarSpec = (brand) => {
     </div>
     `;
 };
-displayCarSpec(currentBrand);
+displayCarSpec();
+
+const displayCarPrice = () => {
+  const spec = carsArr[brandArr][1];
+  carPriceContent.innerHTML = `${spec["price"]}€`
+}
+displayCarPrice();
 
 //Function which is calling all functions to get whole UI of header
 const displayUI = (side) => {
   displayNavModels(side);
   displayCarImg(currentBrand);
   displayCarSpec(currentBrand);
+  displayCarPrice();
 };
 
 leftArr.addEventListener("click", (e) => {

@@ -37,7 +37,7 @@
     <main>
       <section class="section single--car--section container whitespace">
         <div class="active--car--image">
-          <img src="<%= car.car_url %>" alt="This is the photo of active car" />
+          <img src="<%= car.car_url %>" alt="This is the photo of active car" class="single--car--img"/>
           <div class="handle--errors" id="car--error"></div>
         </div>
         <div class="single--car-content">
@@ -69,7 +69,7 @@
           </form>
         </div>
       </section>
-      <section class="section single--car--description container">
+      <section class="single--car--description container">
         <div class="description--item">
           <ion-icon name="map-outline" class="single--car--icon"></ion-icon>
           <p class="single--car-desc"><%=car.car_kilometers%> km</p>

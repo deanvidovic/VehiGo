@@ -11,7 +11,7 @@ const logutAdmin = document.querySelector(".logout--admin");
 navAdminListArr.forEach((e) => {
   e.addEventListener("click", (btn) => {
     const clicked = btn.target.closest(".navigation--item");
-    btn.preventDefault();
+    // btn.preventDefault();
     asideTabs.forEach((tab) => {
       tab.classList.remove("active--item");
     });

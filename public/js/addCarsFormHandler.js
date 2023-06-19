@@ -6,7 +6,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const car_license_number = form.car_license_number.value;
-  const car_brand = form.car_brand.value;
+  const car_brand = document.getElementById("car_brand").value;
   const car_model = form.car_model.value;
   const car_type = document.getElementById("car_type").value;
   const car_kilometers = form.car_kilometers.value;

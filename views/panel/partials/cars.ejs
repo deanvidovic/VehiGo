@@ -29,23 +29,18 @@
                 placeholder="Registracija"
                 class="form--input--admin"
               />
-              <input
-                type="text"
-                name="car_brand"
-                placeholder="Brand auta"
-                class="form--input--admin"
-              />
+              <select class="form--input--admin" id="car_brand">
+                <option value="Tip auta">Marka auta</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="BMW">BMW</option>
+                <option value="Volkswagen">Volkswagen</option>
+              </select>
               <input
                 type="text"
                 name="car_model"
                 placeholder="Model auta"
                 class="form--input--admin"
               />
-              <!-- <select
-                type="text"
-                placeholder="Tip auta"
-                class="form--input--admin"
-              /> -->
               <select class="form--input--admin" id="car_type">
                 <option value="Tip auta">Tip auta</option>
                 <option value="Kupe">Kupe</option>
@@ -55,6 +50,7 @@
                 <option value="Limuzina">Limuzina</option>
                 <option value="Karavan">Karavan</option>
                 <option value="Hatchback">Hatchback</option>
+                <option value="SUV">SUV</option>
               </select>
               <input
                 type="text"
@@ -80,6 +76,7 @@
               <select class="form--input--admin" id="car_seats">
                 <option value="Broj sjedala">Broj sjedala</option>
                 <option value="2">2</option>
+                <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
                 <option value="7">7</option>
@@ -115,7 +112,7 @@
               <input
                 type="text"
                 name="car_url"
-                placeholder="Url za sliku"
+                placeholder="Ime slike"
                 class="form--input--admin form--url--input"
               />
 

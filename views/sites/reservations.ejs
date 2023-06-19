@@ -72,10 +72,13 @@
             <% reservations.forEach(reservation => { 
               if (reservation.reservation_user_id == customer._id) {  isEmpty = true; %>
                 <div class="reservation--card">
-                  <img
-                    src="<%= getURL(reservation.reservation_car_url) %>"
-                    alt="This is photo of reserved car"
-                  />
+                  <div class="reservation--card--img--container">
+                    <img
+                      src="<%= getURL(reservation.reservation_car_url) %>"
+                      alt="This is photo of reserved car"
+                      class="reservation--card--img"
+                    />
+                  </div>
                   <div class="reservation--card--content">
                     <h1 class="reservation--card--heading"><%= auto.car_brand %></h1>
                     <p class="reservation--card--price"><%= auto.car_price %> €/dan</p>

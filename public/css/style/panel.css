@@ -282,3 +282,9 @@ th {
   border: none;
   border-radius: 7px;
 }
+
+.car--error {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  color: var(--white-color);
+}

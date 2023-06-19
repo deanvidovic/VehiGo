@@ -28,6 +28,8 @@
 .ceo--section {
   gap: 3.2rem;
   text-align: left;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .ceo--text {
@@ -35,6 +37,10 @@
   line-height: 1.5;
   font-weight: 300;
   padding-top: 3rem;
+}
+
+.image--ceo {
+  margin: 0 1.8rem;
 }
 
 .ceo--img {

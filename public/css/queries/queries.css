@@ -263,3 +263,26 @@
     height: 4.4rem;
   }
 }
+
+/* BELOW 416px 26em */
+@media (max-width: 26em) {
+  .secondary-heading.about--heading {
+    text-align: center;
+  }
+
+  .ceo--img {
+    max-width: 30rem;
+    max-height: 30rem;
+  }
+}
+
+/* BELOW 18em */
+@media (max-width: 18em) {
+  .secondary-heading.ceo--name {
+    text-align: center;
+  }
+
+  .ceo--text {
+    text-align: center;
+  }
+}
