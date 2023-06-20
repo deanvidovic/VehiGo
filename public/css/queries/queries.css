@@ -48,6 +48,12 @@
   }
 }
 
+/* BELOW 1088px 68em */
+
+@media (max-width: 68em ) {
+  
+}
+
 /* BELOW 944px 59em */
 
 @media (max-width: 59em) {
@@ -133,6 +139,24 @@
     white-space: nowrap;
     font-size: 3.2rem;
     color: var(--dark-color);
+  }
+
+  .single--car--section {
+    flex-direction: column;
+  }
+
+  .active--car--image {
+    align-self: center;
+  }
+
+  .signle--car--desc--container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .description--item {
+    margin-left: 0;
   }
 }
 
