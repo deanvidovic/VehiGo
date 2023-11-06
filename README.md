@@ -1,2 +1,2 @@
 # VehiGo
- VehiGo - rent a car web aplikacija napravljena koristeci node.js
+ VehiGo - rent a car web app made using node.js.
